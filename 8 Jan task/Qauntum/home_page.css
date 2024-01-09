@@ -1,0 +1,153 @@
+body{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: #EEEEEE;
+}
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    height: 35rem;
+    justify-content: center;
+    align-items: center;    
+}
+
+
+
+.firstRow{
+    display: flex;
+    width: 65rem;
+    padding-top: 2rem;
+    justify-content: center;
+    align-items: center;    
+}
+
+.secondRow{
+    display: flex;
+    width: 65rem;
+    justify-content: center;
+    padding-top: 2rem;
+    align-items: center;    
+}
+
+.card{
+    height: 15rem;
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    padding: .4rem 0;
+    background-color: white;
+}
+
+.card2{
+    margin-left: 2rem;
+}
+
+.content{
+    display: flex;
+    height: 12rem;
+    justify-content: center;
+    margin: 0 .7rem;
+    padding-bottom: .5rem;
+    border-bottom: 1.5px solid #949393;
+}
+
+.content >img{
+    height: 11rem;
+    width: auto;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 1rem;
+    width: 17rem;
+    height:  10rem;
+}
+
+.head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 2.2rem;
+}
+
+.subject{
+    display: flex;
+    align-items: center;
+    height: 2.2rem;
+    color:#666666;
+}
+
+.subject .second{
+    padding-left: .3rem;
+}
+
+.subject span {
+    color: #1F7A54;
+}
+
+.syllabus{
+    display: flex;
+    align-items: center;
+    height: 2.2rem;
+}
+
+.syllabus span{
+   color:#666666; 
+}
+
+.syllabus .second {
+    padding-left: .3rem;
+}
+.syllabus .third {
+    padding-left: .3rem;
+}
+
+.class{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #949393;
+    height: 2.7rem;
+    align-items: center;
+    height: 2.2rem;
+}
+
+.class p{
+    color: #222222;
+}
+
+.duration{
+    display: flex;
+    align-items: center;
+    height: 2.2rem;
+    color: #666666;
+}
+
+.duration .second{
+    padding-left: .3rem;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-around;
+    margin: .7rem 0;
+}
+
+@media screen and (max-width: 768px) {
+    .firstRow {
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card2 {
+        margin-left: 0;
+        margin-top: 2rem;
+    }
+    .secondRow{
+       flex-direction: column;
+       justify-content: space-between;
+    }
+  }

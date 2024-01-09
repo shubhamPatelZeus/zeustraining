@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #eeeeee;
+  font-family: "Quicksand", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.header {
+  background-color: black;
+  border-bottom: #3AC7EC solid 2px;
+  height: 5rem;
+}
+.header img {
+  height: 4rem;
+  width: 15rem;
+  margin-left: 3rem;
+  padding-top: 0.5rem;
+}
+
+.content {
+  height: 56.98rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.line {
+  width: 40rem;
+  height: 0.5rem;
+  background-color: #3AC7EC;
+}
+
+.form {
+  width: 40rem;
+  background-color: white;
+}
+.form .upper {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  padding-left: 1.6rem;
+}
+.form .upper .img {
+  height: 2.2rem;
+  width: 2.6rem;
+}
+.form .upper p {
+  margin-left: 6rem;
+  font-size: 2rem;
+}
+.form .radio {
+  display: flex;
+  align-items: center;
+}
+.form .radio .first {
+  display: flex;
+  align-items: center;
+  margin-left: 1.6rem;
+  font-size: 1.5rem;
+}
+.form .middle {
+  margin-left: 2rem;
+  width: 36rem;
+}
+.form .middle .first {
+  border-bottom: #222222 1px solid;
+  margin-bottom: 3rem;
+}
+.form .middle .first .info {
+  margin: 0rem;
+  color: #666666;
+}
+.form .middle .first .input {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+}
+.form .middle .first .input p {
+  margin: 0rem;
+}
+.form .middle .first .input img {
+  margin-left: auto;
+}
+.form .middle .second {
+  margin-top: 5rem;
+}
+.form .middle > div:nth-child(4) {
+  margin-top: 3rem;
+}
+.form .middle .second .userDetails {
+  display: flex;
+  align-items: center;
+  border-bottom: #222222 1px solid;
+}
+.form .middle .second .userDetails p {
+  font-size: 1.5rem;
+  margin: 0rem;
+  color: #666666;
+}
+.form .middle .second .forget {
+  color: #222222;
+  display: flex;
+  justify-content: end;
+}
+.form .middle .second .forget p {
+  margin: 0.5rem;
+  color: #1f7a54;
+}
+.form .middle .second .preview {
+  margin-left: auto;
+  height: 2rem;
+  width: 2.2rem;
+}
+.form .last .remember {
+  display: flex;
+  align-items: center;
+  margin-left: 1.6rem;
+  font-size: 1.5rem;
+}
+.form .last .remember img {
+  height: 2rem;
+  width: 2rem;
+}
+.form .last .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.form .last .btn button {
+  background-color: #3fd28b;
+  color: black;
+  width: 15rem;
+  height: 3rem;
+  font-size: 1.3rem;
+  outline: none;
+  border: none;
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.2392156863);
+}
+
+.footer {
+  margin-top: auto;
+}
+.footer .about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: #1f7a54;
+}
+.footer .about .pipe {
+  color: black;
+}
+.footer .copy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.1607843137);
+  font-size: 1.2rem;
+  height: 3rem;
+}
+.footer .copy .company {
+  font-weight: bold;
+}/*# sourceMappingURL=Login.css.map */

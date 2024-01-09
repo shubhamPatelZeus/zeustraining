@@ -1,0 +1,38 @@
+h1{
+text-align: center;
+color: white;
+letter-spacing: 10px;
+background-color: rgb(126, 10, 10);
+border-bottom: 10px solid red;
+}
+
+h3{
+color: white;
+background-color: green;
+}
+
+b{
+    text-transform: uppercase;
+}
+
+ul{
+    color: rgb(212, 23, 23);
+    font-style: italic;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    border: 2px dashed grey;
+}
+
+.greyH3{
+    background: none;
+    color: grey;
+}
+
+table{
+    background-color: grey;
+}
