@@ -1,0 +1,15 @@
+@import 'variables';
+@import 'header';
+@import 'formContent';
+@import 'footer';
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: $bodyBackgroundColor;
+  font-family: $fontFamily;
+}
+
+html {
+  font-size: 62.5%;
+}

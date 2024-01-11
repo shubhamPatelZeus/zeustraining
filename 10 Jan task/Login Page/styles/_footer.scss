@@ -1,0 +1,22 @@
+.footer {
+    margin-top: auto;
+  
+    .about {
+      @include flex(row);
+      font-size: 1.4rem;
+      color: #1f7a54;
+      .pipe {
+        color: black;
+      }
+    }
+    .copy {
+      @include flex(row);
+      background-color: rgba(0, 0, 0, 0.1607843137);
+      font-size: 1.2rem;
+      height: 3rem;
+      .company {
+        font-weight: bold;
+      }
+    }
+  }
+  

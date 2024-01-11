@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+
+@mixin flex($direction){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: $direction;
+}
+
+@mixin flexWithAlignCenter{
+    display: flex;
+    align-items: center;
+}
+
+$fontFamily : "Quicksand", sans-serif;
+$headerColor : #3AC7EC;
+$bodyBackgroundColor : #eeeeee;
+$headerBackgroundColor : black;
+$formBackgroundColor : white;
