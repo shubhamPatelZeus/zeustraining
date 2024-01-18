@@ -1,0 +1,499 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Quicksand", sans-serif;
+}
+
+body {
+  background-color: #EEEEEE;
+}
+
+.navbar {
+  background-color: #222222;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 3.5rem;
+  display: flex;
+}
+.navbar .logo img {
+  margin: 0.4rem 0rem 0.2rem 1.1rem;
+  height: 2.4rem;
+  width: 8rem;
+}
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+}
+.navbar ul li {
+  list-style: none;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+.navbar ul li a {
+  padding-bottom: 0.9rem;
+  text-decoration: none;
+}
+.navbar ul li a img {
+  margin-right: 2rem;
+  height: 1.3rem;
+}
+.navbar ul li a .num {
+  height: 1rem;
+  width: 0.9rem;
+  font-size: 0.8rem;
+  position: relative;
+  border-radius: 50%;
+  text-align: center;
+  right: -0.85rem;
+  color: white;
+  top: -2rem;
+  background-color: #2A7FF3;
+}
+.navbar ul li a #num1 {
+  height: 1rem;
+  width: 0.9rem;
+  font-size: 0.8rem;
+  position: relative;
+  border-radius: 50%;
+  text-align: center;
+  right: -0.85rem;
+  color: black;
+  top: -2.1rem;
+  background-color: white;
+}
+.navbar ul .item3 img {
+  margin-top: 1.1rem;
+}
+
+.dashboardoption {
+  display: flex;
+}
+
+.mainalert {
+  display: none;
+  position: absolute;
+  overflow-y: scroll;
+  top: 3.5rem;
+  width: 17rem;
+  height: 28rem;
+  background-color: #FFFFFF;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.alertdata {
+  background-color: #FFFFEE;
+  padding: 1rem;
+}
+.alertdata .alertflex {
+  font-size: 0.8rem;
+  display: flex;
+}
+.alertdata .alertflex .alertimage {
+  height: 0.8rem;
+  width: 0.8rem;
+  margin-left: auto;
+  margin-top: 0.2rem;
+}
+.alertdata .alertcourse {
+  font-size: 0.6rem;
+  margin: 0.4rem 0 0.4rem 0;
+}
+.alertdata .alertcourse span {
+  color: #6E6E6E;
+}
+.alertdata .alertdate {
+  font-size: 0.6rem;
+  color: #6E6E6E;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mainalert::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Track */
+.mainalert::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.mainalert::-webkit-scrollbar-thumb {
+  background: #979797;
+}
+
+/* Handle on hover */
+.mainalert::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.alertbutton {
+  position: fixed;
+  top: 31.5rem;
+  width: 17rem;
+  text-align: center;
+  padding: 0.8rem 0 0.8rem 0;
+  background-color: #FFFFFF;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  color: #1F7A54;
+  font-size: 0.9rem;
+}
+
+.mainannouncement {
+  display: none;
+  position: absolute;
+  overflow-y: scroll;
+  top: 3.5rem;
+  width: 17rem;
+  height: 28rem;
+  background-color: #FFFFFF;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: all 4s ease-in-out;
+}
+
+.announcementdata {
+  background-color: #FFFFEE;
+  padding: 1rem;
+}
+.announcementdata .announcementflex {
+  font-size: 0.6rem;
+  display: flex;
+}
+.announcementdata .announcementflex .announcementname span {
+  color: #6E6E6E;
+}
+.announcementdata .announcementflex .announcementimage {
+  height: 0.7rem;
+  width: 0.7rem;
+  margin-left: auto;
+  margin-top: 0.2rem;
+}
+.announcementdata .announcementcontent {
+  font-size: 0.8rem;
+  padding-right: 1.2rem;
+}
+.announcementdata .announcementcourse {
+  font-size: 0.6rem;
+  margin: 0.4rem 0 0.4rem 0;
+}
+.announcementdata .announcementcourse span {
+  color: #6E6E6E;
+}
+.announcementdata .filedate {
+  display: flex;
+  align-items: center;
+}
+.announcementdata .filedate .file {
+  font-size: 0.6rem;
+}
+.announcementdata .filedate .file img {
+  width: 0.6rem;
+  height: 0.6rem;
+}
+.announcementdata .filedate .announcementdate {
+  font-size: 0.6rem;
+  color: #6E6E6E;
+  margin-left: auto;
+}
+
+.mainannouncement::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Track */
+.mainannouncement::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.mainannouncement::-webkit-scrollbar-thumb {
+  background: #979797;
+}
+
+/* Handle on hover */
+.mainannouncement::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.button {
+  position: fixed;
+  top: 31.5rem;
+  width: 17rem;
+  padding: 0.8rem 0 0.8rem 0;
+  display: flex;
+  background-color: #FFFFFF;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  color: #1F7A54;
+  font-size: 0.9rem;
+}
+.button .showallbutton {
+  width: 50%;
+  border-right: 0.5px solid rgba(0, 0, 0, 0.1215686275);
+  text-align: center;
+}
+.button .createnewbutton {
+  width: 50%;
+  text-align: center;
+}
+
+.option {
+  background-color: #8DDC97;
+  margin: 4.9rem 1.7rem 0rem 1.7rem;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.option .item {
+  text-align: center;
+}
+.option .item a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: black;
+  display: flex;
+  justify-content: center;
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
+}
+.option .item a span {
+  margin-left: 0.3rem;
+  font-weight: bolder;
+}
+.option .item a:hover {
+  border-bottom: 4px solid black;
+}
+.option img {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.search {
+  display: flex;
+  margin: 1.7rem 1.7rem 0rem 1.7rem;
+  color: #686868;
+  font-size: 0.8rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid #bfbdbd;
+}
+.search .rightsearch {
+  margin-left: auto;
+  display: flex;
+  margin-top: -0.3rem;
+}
+.search .rightsearch .coursedetails {
+  display: flex;
+  margin-top: -0.2rem;
+  border-bottom: 1px solid #bfbdbd;
+}
+.search .rightsearch .coursedetails > div {
+  color: #333333;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-right: 2rem;
+}
+.search .rightsearch > div {
+  margin-right: 0.3rem;
+}
+.search > img {
+  margin-top: -0.2rem;
+  height: 1.2rem;
+  margin-left: 0.7rem;
+}
+
+/** card **/
+.cardmain1, .cardmain2, .cardmain3, .cardmain4 {
+  background-color: white;
+  margin: 1.7rem;
+  padding: 1.6rem 1.6rem 0rem 1.6rem;
+}
+.cardmain1 .card1, .cardmain2 .card1, .cardmain3 .card1, .cardmain4 .card1 {
+  display: flex;
+  border-bottom: 1px solid #bfbdbd;
+  padding-bottom: 1rem;
+}
+.cardmain1 .card1 > img, .cardmain2 .card1 > img, .cardmain3 .card1 > img, .cardmain4 .card1 > img {
+  height: 12rem;
+  width: 10rem;
+  margin-right: 1rem;
+}
+.cardmain1 .card1 .carddetails, .cardmain2 .card1 .carddetails, .cardmain3 .card1 .carddetails, .cardmain4 .card1 .carddetails {
+  width: 72%;
+}
+.cardmain1 .card1 .carddetails > .bigtext, .cardmain2 .card1 .carddetails > .bigtext, .cardmain3 .card1 .carddetails > .bigtext, .cardmain4 .card1 .carddetails > .bigtext {
+  display: flex;
+  font-size: 1.1rem;
+  margin-bottom: 0.7rem;
+}
+.cardmain1 .card1 .carddetails > .bigtext > img, .cardmain2 .card1 .carddetails > .bigtext > img, .cardmain3 .card1 .carddetails > .bigtext > img, .cardmain4 .card1 .carddetails > .bigtext > img {
+  margin-left: auto;
+  height: 1.4rem;
+  width: 1.4rem;
+}
+.cardmain1 .card1 .carddetails .smalltext, .cardmain2 .card1 .carddetails .smalltext, .cardmain3 .card1 .carddetails .smalltext, .cardmain4 .card1 .carddetails .smalltext {
+  font-size: 0.7rem;
+  color: #666666;
+  margin-bottom: 0.6rem;
+}
+.cardmain1 .card1 .carddetails .smalltext > span, .cardmain2 .card1 .carddetails .smalltext > span, .cardmain3 .card1 .carddetails .smalltext > span, .cardmain4 .card1 .carddetails .smalltext > span {
+  font-weight: bold;
+  color: black;
+}
+.cardmain1 .symbol, .cardmain2 .symbol, .cardmain3 .symbol, .cardmain4 .symbol {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+#classdet {
+  border-bottom: 1px solid #bfbdbd;
+  padding: 0.4rem 0rem 0.1rem 0rem;
+}
+
+#fav img {
+  margin-right: -0.8rem;
+  height: 1.8rem;
+  width: 1.8rem;
+}
+
+.cardmain4 {
+  padding-top: 0.3rem;
+}
+
+#expired {
+  color: red;
+  font-weight: bold;
+  background-color: #FFE4E6;
+  padding: 0.2rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  bottom: 0.5rem;
+  left: -1.6rem;
+  font-size: 0.8rem;
+}
+
+footer {
+  position: relative;
+  margin-top: 2rem;
+  width: 100%;
+}
+footer .contact {
+  color: #1F7A54;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 0.6rem;
+}
+footer .footerdetails {
+  display: flex;
+  font-size: 1rem;
+  color: #616161;
+  background-color: #E0E1E1;
+  height: 2rem;
+  justify-content: center;
+  padding-top: 1.1rem;
+}
+footer .footerdetails img {
+  height: 1.6rem;
+  width: 5.4rem;
+  margin-top: -0.3rem;
+  margin-right: 0.5rem;
+}
+footer .footerdetails span {
+  margin-right: 0.5rem;
+}
+footer .footerdetails p span {
+  font-weight: bold;
+  margin-left: 0.5rem;
+}
+
+@media only screen and (max-width: 1000px) {
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .cardmain1, .cardmain2, .cardmain3, .cardmain4 {
+    margin-right: 4rem;
+    margin-left: 4rem;
+  }
+  .navbar ul li a img {
+    height: 1.6rem;
+  }
+  .item1 {
+    display: block;
+  }
+  .mainalert {
+    right: 11.8rem;
+  }
+  .mainannouncement {
+    right: 7.8rem;
+  }
+  .dashboardoption {
+    display: none;
+    width: 14rem;
+    position: absolute;
+    top: 3.5rem;
+    right: 1rem;
+    background-color: #FFFFFF;
+  }
+  .dashboardoption .dashboardcontent {
+    background-color: #F3F3F3;
+  }
+  .dashboardoption .dashboardcontent .content1 {
+    display: flex;
+    align-items: center;
+  }
+  .dashboardoption .dashboarddetails {
+    display: flex;
+    align-items: center;
+  }
+  .dashboardoption li {
+    padding: 0.9rem;
+  }
+  .dashboardoption li a {
+    color: #1F7A54;
+  }
+  .dashboardoption .ig {
+    margin-left: auto;
+    margin-right: 0.5rem;
+    height: 1.4rem;
+    width: 1.4rem;
+  }
+  .dashboardoption .coursecatalog {
+    padding-left: 2rem;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .item2 {
+    display: none;
+  }
+  .mainalert {
+    right: 8rem;
+  }
+  .mainannouncement {
+    right: 4.3rem;
+  }
+  .dashboardoption li a {
+    color: #3FD28B;
+    margin-right: 2rem;
+  }
+  .dashboardoption > li:nth-child(1) a {
+    color: white;
+    border-bottom: 3px solid white;
+  }
+  .item1 a:hover {
+    color: white;
+    border-bottom: 3px solid white;
+  }
+  .ig, .coursecatalog {
+    display: none;
+  }
+}/*# sourceMappingURL=Hm1.css.map */

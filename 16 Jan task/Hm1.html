@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home page</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="./Hm1.css" />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="./Assets/images/logo used in header.svg" />
+      </div>
+      <ul>
+        <div class="dashboardoption">
+          <li class="item1">
+            <a
+              href=""
+              >Dashboard</a
+            >
+          </li>
+          <div class="dashboardcontent">
+            <div class="content1">
+              <li class="item1"><a href="">Content</a></li>
+              <img src="./Assets/images/arrow-down.svg" alt="" class="ig" />
+            </div>
+            <li class="coursecatalog"><a href="">Course Catalog</a></li>
+          </div>
+          <div class="dashboarddetails">
+            <li class="item1"><a href="">Users</a></li>
+            <img src="./Assets/images/arrow-down.svg" alt="" class="ig" />
+          </div>
+          <div class="dashboarddetails">
+            <li class="item1"><a href="">Reports</a></li>
+            <img src="./Assets/images/arrow-down.svg" alt="" class="ig" />
+          </div>
+          <div class="dashboarddetails">
+            <li class="item1"><a href="">Admin</a></li>
+            <img src="./Assets/images/arrow-down.svg" alt="" class="ig" />
+          </div>
+        </div>
+        <li class="item3" onmouseover="alertFunction()" onmouseout="alertClose()">
+          <a href="javascript:void(0);" 
+            ><img src="./Assets/images/alerts.svg" />
+            <div class="num" id="alertnum">2</div>
+          </a>
+        </li>
+        <div class="mainalert" onmouseout="alertClose()"  onmouseover="alertFunction()">
+          <div class="alert">
+          </div>
+          <div class="alertbutton">SHOW ALL</div>
+        </div>
+
+        <li class="item3"  onmouseover="announcementsFunction()" onmouseout="announcementsClose()">
+          <a href="javascript:void(0);" 
+            ><img src="./Assets/images/announcements.svg" />
+            <div class="num" id="announcementsnum">1</div>
+          </a>
+        </li>
+
+        <div class="mainannouncement" onmouseout="announcementsClose()" onmouseover="announcementsFunction()">
+          <div class="announcement">
+          </div>
+          <div class="button">
+            <div class="showallbutton">SHOW ALL</div>
+            <div class="createnewbutton">CREATE NEW</div>
+          </div>
+        </div>
+
+        <li class="item3" id="profile">
+          <a href=""
+            ><img
+              style="border-radius: 50%; height: 1.5rem; width: 1.5rem"
+              src="https://img.freepik.com/free-photo/headshot-beautiful-dark-skinned-curly-has-pleased-expression-rejoices-success-enjoys-spare-time-wears-casual-t-shirt-isolated-yellow-wall-people-positive-emotions-feelings-concept_273609-27729.jpg"
+            />
+            <div id="num1">T</div>
+          </a>
+        </li>
+        <li class="item2">
+          <a href="javascript:void(0);" class="hamburgermenu"
+            ><img src="./Assets/images/hamburger-menu.svg"
+          /></a>
+        </li>
+      </ul>
+    </nav>
+    <div class="option">
+      <div class="item">
+        <a href=""
+          ><img src="./Assets/images/courses.svg" />
+          <p><span>4 </span>Courses</p>
+        </a>
+      </div>
+      <div class="item">
+        <a href=""
+          ><img src="./Assets/images/classes.svg" />
+          <p><span>4 </span>Classes</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="search">
+      <div>Showing 4 of 4 courses</div>
+      <div class="rightsearch">
+        <div>Sort By:</div>
+        <div class="coursedetails">
+          <div>Course Name</div>
+          <img src="./Assets/images/arrow-down.svg" />
+        </div>
+      </div>
+      <img src="./Assets/images/sort.svg" />
+    </div>
+
+    <div class="cards">
+    </div>
+
+    <footer>
+      <div class="contact">
+        About<span style="color: #616161"> | </span>Contact Us
+      </div>
+      <div class="footerdetails">
+        <img src="./Assets/images/logo used in footer.svg" />
+        <span>|</span>
+        <p claas="p1">Copyright © 2020-2021</p>
+        <p><span>Zeus System Pvt.Ltd</span></p>
+        <p class="p1">All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="./script/index.js" type="module"></script>
+    <script>
+      function alertFunction() {
+        const x = document.querySelector("#alertnum");
+        const y = document.querySelector(".mainalert");
+          x.style.visibility = "hidden";
+          y.style.display = "block";
+          // x.style.opacity = "0";
+      }
+
+      function alertClose(){
+        const x = document.querySelector("#alertnum");
+        const y = document.querySelector(".mainalert");
+
+        if (x.style.visibility === "hidden" && y.style.display === "block") {
+             x.style.visibility = "visible";
+             y.style.display = "none";
+        } 
+
+      }
+
+      function announcementsFunction() {
+        const x = document.querySelector("#announcementsnum");
+        const y = document.querySelector(".mainannouncement");
+        
+          x.style.visibility = "hidden";
+          y.style.display = "block";
+      }
+
+      function announcementsClose(){
+        const x = document.querySelector("#announcementsnum");
+        const y = document.querySelector(".mainannouncement");
+
+        if (x.style.visibility === "hidden" && y.style.display === "block") {
+          x.style.visibility = "visible";
+          y.style.display = "none";
+        } 
+      }
+
+      
+    </script>
+  </body>
+</html>

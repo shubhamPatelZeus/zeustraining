@@ -1,0 +1,66 @@
+{
+    "alert":[
+        { 
+            "content":"License for Introduction to Algebra has been assigned to your school",
+            "cource":{
+                "course1":"",
+                "msg":""
+            },
+            "date":"15-Sep-2018 at 07:21 pm",
+            "image":"./Assets/images/dnd.png",
+            "bgcolor": 0
+        },
+        {
+            "content":"Lesson 3 Practice Worksheet overdue for Amy Santiago",
+            "cource":{
+                "course1":"Course: ",
+                "msg":"Advanced Mathematics"
+            },
+            "date":"15-Sep-2018 at 05:21 pm",
+            "image":"./Assets/images/correct.png",
+            "bgcolor": 1
+        },
+        {
+            "content":"23 new students created",
+            "cource":{
+                "course1":"",
+                "msg":""
+            },
+            "date":"14-Sep-2018 at 01:21 pm",
+            "image":"./Assets/images/dnd.png",
+            "bgcolor": 0
+        },
+        {
+            "content":"License for Introduction to Algebra has been assigned to your school",
+            "cource":
+            {
+                "course1":"Course: ",
+                "msg":"Advanced Mathematics"
+            },
+            "date":"15-Sep-2018 at 05:21 pm",
+            "image":"./Assets/images/dnd.png",
+            "bgcolor": 0
+        },
+        {
+            "content":"License for Basic Concepts in Geometry has been assigned to your... school",
+            "cource":{
+                "course1":"",
+                "msg":""
+            },
+            "date":"15-Sep-2018 at 07:21 pm",
+            "image":"./Assets/images/dnd.png",
+            "bgcolor": 0
+        },
+        {
+            "content":"Lesson 3 Practice Worksheet overdue for Sam Diego",
+            "cource":
+            {
+                "course1":"Class: ",
+                "msg":"Basics of Algebra"
+            },
+            "date":"15-Sep-2018 at 05:21 pm",
+            "image":"./Assets/images/correct.png",
+            "bgcolor": 1
+        }
+    ]
+}

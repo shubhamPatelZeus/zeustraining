@@ -1,0 +1,82 @@
+{
+    "announcement":[
+        { 
+            "name":{
+                "designation":"PA",
+                "fullname":"willson kumar"
+            },
+            "lecture":"No classes will be held on 21st Nov",
+            "image":"./Assets/images/correct.png",
+            "files":"2 files are attached",
+            "cource":"",
+            "date":"15-Sep-2018 at 07:21 pm",
+            "bgcolor": 1,
+            "ig": 1
+        },
+        {
+            "name":{
+                "designation":"PA",
+                "fullname":"willson kumar"
+            },
+            "lecture":"Guest lecture on Geometry on 20th September",
+            "image":"./Assets/images/dnd.png",
+            "files":"2 files are attached",
+            "cource":"",
+            "date":"15-Sep-2018 at 07:21 pm",
+            "bgcolor": 0,
+            "ig": 1
+        },
+        {
+            "name":{
+                "designation":"PA",
+                "fullname":"willson kumar"
+            },
+            "lecture":"Additional course materials available on request",
+            "image":"./Assets/images/correct.png",
+            "files":"",
+            "cource":"Course: Mathematics 101",
+            "date":"15-Sep-2018 at 07:21 pm",
+            "bgcolor": 1,
+            "ig": 0
+        },
+        {
+            "name":{
+                "designation":"PA",
+                "fullname":"willson kumar"
+            },
+            "lecture":"No classes will be held on 25th Dec",
+            "image":"./Assets/images/dnd.png",
+            "files":"",
+            "cource":"",
+            "date":"15-Sep-2018 at 07:21 pm",
+            "bgcolor": 0,
+            "ig": 0
+        },
+        {
+            "name":{
+                "designation":"PA",
+                "fullname":"willson kumar"
+            },
+            "lecture":"Additional course materials available on request",
+            "image":"./Assets/images/dnd.png",
+            "files":"",
+            "cource":"Course: Mathematics 101",
+            "date":"15-Sep-2018 at 07:21 pm",
+            "bgcolor": 0,
+            "ig": 0
+        },
+        {
+            "name":{
+                "designation":"PA",
+                "fullname":"willson kumar"
+            },
+            "lecture":"No classes will be held on 21st Nov",
+            "image":"./Assets/images/dnd.png",
+            "files":"",
+            "cource":"Course: Mathematics 101",
+            "date":"15-Sep-2018 at 07:21 pm",
+            "bgcolor": 0,
+            "ig": 0
+        }
+    ]
+}
