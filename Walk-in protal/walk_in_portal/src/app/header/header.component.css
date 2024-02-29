@@ -1,0 +1,28 @@
+.header {
+  height: 7vh;
+  width: auto;
+  background-color: #1F2834;
+  display: flex;
+  align-items: center;
+  border-bottom: 0.5vh solid #3ac7ec;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 5vh;
+  width: auto;
+  margin-left: 2.5vw;
+}
+
+.userProfile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5vh;
+  width: 5vh;
+  margin-right: 3vw;
+  color: #ffffff;
+  background-color: #3c4e62;
+  border: 0.2vh solid #3fd28b;
+  border-radius: 60%;
+}

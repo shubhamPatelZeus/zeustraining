@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\walk_in_portal_api.props" />
+</Project>

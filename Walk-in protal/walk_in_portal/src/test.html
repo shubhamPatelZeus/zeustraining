@@ -1,0 +1,177 @@
+<div class="reviewAndProceedForm">
+  <div class="progressBar">
+    <div class="personalInfo">
+      <p class="checkpoint active">
+        <img
+          class="completed"
+          src="../../assets/images/pen-solid.svg"
+          alt="compeleted"
+        />
+      </p>
+      <p>Personal Information</p>
+    </div>
+    <hr />
+    <div class="qualifications">
+      <p class="checkpoint active">
+        <img
+          class="completed"
+          src="../../assets/images/pen-solid.svg"
+          alt="compeleted"
+        />
+      </p>
+      <p>Qualifications</p>
+    </div>
+    <hr />
+    <div class="reviewAndProceed">
+      <p class="checkpoint active">3</p>
+      <p>Review and Proceed</p>
+    </div>
+  </div>
+
+  <form ngNativeValidate (ngSubmit)="onSubmit()">
+    <div class="reviewPersonalInfo">
+      <div class="title">
+        <p>Personal Information</p>
+        <p>
+          <img src="../../assets/images/pen-solid (1).svg" alt="edit" />
+          Edit
+        </p>
+      </div>
+      <div class="personalInfoformData">
+        <div class="leftSide">
+          <div class="firstName">
+            <p>First Name</p>
+            <p
+              *ngIf="userInfo && userInfo.first_name; else firstNameAlternative"
+              class="data"
+            >
+              {{ userInfo.first_name }}
+            </p>
+            <ng-template #firstNameAlternative>
+              <p>-</p>
+            </ng-template>
+          </div>
+          <div class="lastName">
+            <p>Last Name</p>
+            <p
+              *ngIf="userInfo && userInfo.last_name; else lastNameAlternative"
+              class="data"
+            >
+              {{ userInfo.last_name }}
+            </p>
+            <ng-template #lastNameAlternative>
+              <p>-</p>
+            </ng-template>
+          </div>
+          <div class="emailId">
+            <p>Email</p>
+            <p
+              *ngIf="userInfo && userInfo.email_id; else emailAlternative"
+              class="data"
+            >
+              {{ userInfo.email_id }}
+            </p>
+            <ng-template #emailAlternative>
+              <p>-</p>
+            </ng-template>
+          </div>
+          <div class="phoneNumber">
+            <p>Phone Number</p>
+            <p
+              *ngIf="
+                userInfo && userInfo.country_code && userInfo.phone_number;
+                else phoneNumberAlternative
+              "
+              class="data"
+            >
+              + {{ userInfo.country_code }} {{ userInfo.phone_number }}
+            </p>
+            <ng-template #phoneNumberAlternative>
+              <p>-</p>
+            </ng-template>
+          </div>
+          <div class="resume">
+            <img
+              src="../../assets/images/uplaod_review_page.svg"
+              alt="uplaod"
+            />
+            <span>UPLOAD RESUME</span>
+            <p
+              *ngIf="userInfo && userInfo.resume; else resumeAlternative"
+              class="data"
+            >
+              {{ userInfo.resume.name }}
+            </p>
+            <ng-template #resumeAlternative>
+              <p>-</p>
+            </ng-template>
+          </div>
+          <div class="portfolioUrl">
+            <p>Enter Portfolio URL (if any)</p>
+            <p
+              *ngIf="
+                userInfo && userInfo.protfolio_url;
+                else portfolioUrlAlternative
+              "
+              class="data"
+            >
+              {{ userInfo.protfolio_url }}
+            </p>
+            <ng-template #portfolioUrlAlternative>
+              <p>-</p>
+            </ng-template>
+          </div>
+          <div class="preferredJobRoles">
+            <p>Preferred Job Roles</p>
+            <p
+              *ngIf="
+                userInfo &&
+                  userInfo.preferred_job_roles &&
+                  userInfo.preferred_job_roles.length;
+                else preferredJobRoleAlternative
+              "
+              class="data"
+            >
+              <span *ngFor="let jobRole of userInfo.preferred_job_roles">{{
+                jobRole
+              }}</span>
+            </p>
+            <ng-template #preferredJobRoleAlternative>
+              <p>-</p>
+            </ng-template>
+          </div>
+          <div class="referrer">
+            <p>
+              If You Are Registering Via A Referral, Please Mention Full Name Of
+              The Employee Who Referred You
+            </p>
+            <p
+              *ngIf="
+                userInfo && userInfo.protfolio_url;
+                else portfolioUrlAlternative
+              "
+              class="data"
+            >
+              {{ userInfo.protfolio_url }}
+            </p>
+            <ng-template #portfolioUrlAlternative>
+              <p>-</p>
+            </ng-template>
+          </div>
+          <div class="mailListSubcription">
+            <img
+              src="../../assets/images/check_box_review_page.svg"
+              alt="checked box"
+            />
+            <p class="data">Send me job related updates via mail</p>
+          </div>
+        </div>
+        <div class="rightSide">
+          <div class="userImage">
+            <img src="../../assets/images/circle-user-solid.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

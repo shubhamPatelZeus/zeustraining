@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "bXBwAacbQkjk3dAVUL9HcZwKCUKmg4IQZ0qv+Mev6aU=",
+  "Source": "walk_in_portal_api",
+  "BasePath": "_content/walk_in_portal_api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "walk_in_portal_api\\wwwroot",
+      "Source": "walk_in_portal_api",
+      "ContentRoot": "D:\\Zeus internship\\zeustraining\\Walk-in protal\\walk_in_portal_api\\wwwroot\\",
+      "BasePath": "_content/walk_in_portal_api",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\Zeus internship\\zeustraining\\Walk-in protal\\walk_in_portal_api\\wwwroot\\Images\\IMG_20240219_221206.jpg",
+      "SourceId": "walk_in_portal_api",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Zeus internship\\zeustraining\\Walk-in protal\\walk_in_portal_api\\wwwroot\\",
+      "BasePath": "_content/walk_in_portal_api",
+      "RelativePath": "Images/IMG_20240219_221206.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\IMG_20240219_221206.jpg"
+    }
+  ]
+}

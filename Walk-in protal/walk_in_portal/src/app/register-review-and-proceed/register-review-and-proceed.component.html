@@ -1,0 +1,780 @@
+<div class="reviewAndProceedForm">
+  <div class="progressBar">
+    <div class="personalInfo">
+      <p class="checkpoint active">
+        <img
+          class="completed"
+          src="../../assets/images/pen-solid.svg"
+          alt="compeleted"
+        />
+      </p>
+      <p>Personal Information</p>
+    </div>
+    <hr />
+    <div class="qualifications">
+      <p class="checkpoint active">
+        <img
+          class="completed"
+          src="../../assets/images/pen-solid.svg"
+          alt="compeleted"
+        />
+      </p>
+      <p>Qualifications</p>
+    </div>
+    <hr />
+    <div class="reviewAndProceed">
+      <p class="checkpoint active">3</p>
+      <p>Review and Proceed</p>
+    </div>
+  </div>
+
+  <form ngNativeValidate (ngSubmit)="onSubmit()">
+    <div class="reviewPersonalInfo">
+      <div class="title">
+        <p>Personal Information</p>
+        <a routerLink="/register/personal-info" class="editButton">
+          <p>
+            <img src="../../assets/images/pen-solid (1).svg" alt="edit" />Edit
+          </p>
+        </a>
+      </div>
+      <div class="personalInfoformData">
+        <div class="leftSide">
+          <div class="firstName">
+            <p>First Name</p>
+            <p
+              *ngIf="
+                userInfo &&
+                  userInfo.personalInfoForm &&
+                  userInfo.personalInfoForm.first_name;
+                else firstNameAlternative
+              "
+              class="data"
+            >
+              {{ userInfo.personalInfoForm.first_name }}
+            </p>
+            <ng-template #firstNameAlternative>
+              <p>-</p>
+            </ng-template>
+          </div>
+          <div class="lastName">
+            <p>Last Name</p>
+            <p
+              *ngIf="
+                userInfo &&
+                  userInfo.personalInfoForm &&
+                  userInfo.personalInfoForm.last_name;
+                else lastNameAlternative
+              "
+              class="data"
+            >
+              {{ userInfo.personalInfoForm.last_name }}
+            </p>
+            <ng-template #lastNameAlternative>
+              <p>-</p>
+            </ng-template>
+          </div>
+          <div class="emailId">
+            <p>Email</p>
+            <p
+              *ngIf="
+                userInfo &&
+                  userInfo.personalInfoForm &&
+                  userInfo.personalInfoForm.email_id;
+                else emailAlternative
+              "
+              class="data"
+            >
+              {{ userInfo.personalInfoForm.email_id }}
+            </p>
+            <ng-template #emailAlternative>
+              <p>-</p>
+            </ng-template>
+          </div>
+          <div class="phoneNumber">
+            <p>Phone Number</p>
+            <p
+              *ngIf="
+                userInfo &&
+                  userInfo.personalInfoForm &&
+                  userInfo.personalInfoForm.country_code &&
+                  userInfo.personalInfoForm.phone_number;
+                else phoneNumberAlternative
+              "
+              class="data"
+            >
+              + {{ userInfo.personalInfoForm.country_code }}
+              {{ userInfo.personalInfoForm.phone_number }}
+            </p>
+            <ng-template #phoneNumberAlternative>
+              <p>-</p>
+            </ng-template>
+          </div>
+          <div class="resume">
+            <img
+              src="../../assets/images/uplaod_review_page.svg"
+              alt="upload"
+            />
+            <span>UPLOAD RESUME</span>
+            <p
+              *ngIf="
+                userInfo &&
+                  userInfo.personalInfoForm &&
+                  userInfo.personalInfoForm.resume;
+                else resumeAlternative
+              "
+              class="data"
+            >
+              {{
+                userInfo.personalInfoForm.resume.substring(
+                  userInfo.personalInfoForm.resume.lastIndexOf("/") + 1
+                )
+              }}
+            </p>
+            <ng-template #resumeAlternative>
+              <p>-</p>
+            </ng-template>
+          </div>
+          <div class="portfolioUrl">
+            <p>Enter Portfolio URL (if any)</p>
+            <p
+              *ngIf="
+                userInfo &&
+                  userInfo.personalInfoForm &&
+                  userInfo.personalInfoForm.portfolio_url;
+                else portfolioUrlAlternative
+              "
+              class="data"
+            >
+              {{ userInfo.personalInfoForm.portfolio_url }}
+            </p>
+            <ng-template #portfolioUrlAlternative>
+              <p>-</p>
+            </ng-template>
+          </div>
+          <div class="preferredJobRoles">
+            <p>Preferred Job Roles</p>
+            <p
+              *ngIf="
+                userInfo &&
+                  userInfo.personalInfoForm.preferred_job_roles &&
+                  userInfo.personalInfoForm.preferred_job_roles.length;
+                else preferredJobRoleAlternative
+              "
+              class="data"
+            >
+              <span
+                *ngFor="
+                  let jobRole of userInfo.personalInfoForm.preferred_job_roles
+                "
+                >{{ jobRole.name }}</span
+              >
+            </p>
+            <ng-template #preferredJobRoleAlternative>
+              <p>-</p>
+            </ng-template>
+          </div>
+          <div class="referrer">
+            <p>
+              If You Are Registering Via A Referral, Please Mention Full Name Of
+              The Employee Who Referred You
+            </p>
+            <p
+              *ngIf="
+                userInfo &&
+                  userInfo.personalInfoForm &&
+                  userInfo.personalInfoForm.protfolio_url;
+                else portfolioUrlAlternative
+              "
+              class="data"
+            >
+              {{ userInfo.personalInfoForm.protfolio_url }}
+            </p>
+            <ng-template #portfolioUrlAlternative>
+              <p>-</p>
+            </ng-template>
+          </div>
+          <div class="mailListSubcription">
+            <img
+              *ngIf="
+                userInfo &&
+                userInfo.personalInfoForm &&
+                userInfo.personalInfoForm.is_subscribed_to_email
+              "
+              src="../../assets/images/check_box_review_page.svg"
+              alt="checked box"
+            />
+            <img
+              *ngIf="
+                userInfo &&
+                userInfo.personalInfoForm &&
+                !userInfo.personalInfoForm.is_subscribed_to_email
+              "
+              src="../../assets/images/check_box_outline_review_page.svg"
+              alt="checked box"
+            />
+            <p class="data">Send me job related updates via mail</p>
+          </div>
+        </div>
+        <div class="rightSide">
+          <div
+            class="userImage"
+            *ngIf="
+              userInfo &&
+              userInfo.personalInfoForm &&
+              userInfo.personalInfoForm.user_image
+            "
+          >
+            <img src="{{ userInfo.personalInfoForm.user_image }}" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="reviewQualifications">
+      <div class="title">
+        <p>Qualifications</p>
+        <a routerLink="/register/qualifications" class="editButton">
+          <p>
+            <img src="../../assets/images/pen-solid (1).svg" alt="edit" />Edit
+          </p>
+        </a>
+      </div>
+      <div class="educationalQualifications">
+        <div class="subTitle">
+          <h3>Educational Qualifications</h3>
+        </div>
+        <div class="educationalQualificationsForm">
+          <div class="aggregatePercentage">
+            <p>Aggregate Percentage</p>
+            <p
+              *ngIf="
+                userInfo &&
+                  userInfo.qualificationForm &&
+                  userInfo.qualificationForm.educationalQualification &&
+                  userInfo.qualificationForm.educationalQualification
+                    .aggregate_percentage;
+                else aggregatePercentageAlternative
+              "
+              class="data"
+            >
+              {{
+                userInfo.qualificationForm.educationalQualification
+                  .aggregate_percentage
+              }}
+            </p>
+            <ng-template #aggregatePercentageAlternative>
+              <p>-</p>
+            </ng-template>
+          </div>
+          <div class="yearOfPassing">
+            <p>Year of Passing</p>
+            <p
+              *ngIf="
+                userInfo &&
+                  userInfo.qualificationForm &&
+                  userInfo.qualificationForm.educationalQualification &&
+                  userInfo.qualificationForm.educationalQualification
+                    .year_of_passing;
+                else yearOfPassingAlternative
+              "
+              class="data"
+            >
+              {{
+                userInfo.qualificationForm.educationalQualification
+                  .year_of_passing
+              }}
+            </p>
+            <ng-template #yearOfPassingAlternative>
+              <p>-</p>
+            </ng-template>
+          </div>
+          <div class="qualificationAndStream">
+            <div class="qualification">
+              <p>Qualification</p>
+              <p
+                *ngIf="
+                  userInfo &&
+                    userInfo.qualificationForm &&
+                    userInfo.qualificationForm.educationalQualification &&
+                    userInfo.qualificationForm.educationalQualification
+                      .qualification_type;
+                  else qualificationAlternative
+                "
+                class="data"
+              >
+                {{
+                  userInfo.qualificationForm.educationalQualification
+                    .qualification_type.name
+                }}
+              </p>
+              <ng-template #qualificationAlternative>
+                <p>-</p>
+              </ng-template>
+            </div>
+            <div class="stream">
+              <p>Stream</p>
+              <p
+                *ngIf="
+                  userInfo &&
+                    userInfo.qualificationForm &&
+                    userInfo.qualificationForm.educationalQualification &&
+                    userInfo.qualificationForm.educationalQualification
+                      .stream_type;
+                  else streamAlternative
+                "
+                class="data"
+              >
+                {{
+                  userInfo.qualificationForm.educationalQualification
+                    .stream_type.name
+                }}
+              </p>
+              <ng-template #streamAlternative>
+                <p>-</p>
+              </ng-template>
+            </div>
+          </div>
+          <div class="collegeName">
+            <div class="collegeNameDropdown">
+              <p>College</p>
+              <p
+                *ngIf="
+                  userInfo &&
+                    userInfo.qualificationForm &&
+                    userInfo.qualificationForm.educationalQualification &&
+                    userInfo.qualificationForm.educationalQualification
+                      .college_name;
+                  else collegeNameAlternative
+                "
+                class="data"
+              >
+                {{
+                  userInfo.qualificationForm.educationalQualification
+                    .college_name.name
+                }}
+              </p>
+              <ng-template #collegeNameAlternative>
+                <p>-</p>
+              </ng-template>
+            </div>
+            <div class="collegeNameOther">
+              <p>If others, please enter your college name</p>
+              <p
+                *ngIf="
+                  userInfo &&
+                    !userInfo.qualificationForm &&
+                    userInfo.qualificationForm.educationalQualification &&
+                    userInfo.qualificationForm.educationalQualification
+                      .college_name;
+                  else collegeNameAlternative
+                "
+                class="data"
+              >
+                {{
+                  userInfo.qualificationForm.educationalQualification
+                    .college_name
+                }}
+              </p>
+              <ng-template #collegeNameAlternative>
+                <p>-</p>
+              </ng-template>
+            </div>
+          </div>
+          <div class="collegeLocation">
+            <p>Where is your college located?</p>
+            <p
+              *ngIf="
+                userInfo &&
+                  userInfo.qualificationForm &&
+                  userInfo.qualificationForm.educationalQualification &&
+                  userInfo.qualificationForm.educationalQualification
+                    .college_location;
+                else collegelocationAlternative
+              "
+              class="data"
+            >
+              {{
+                userInfo.qualificationForm.educationalQualification
+                  .college_location
+              }}
+            </p>
+            <ng-template #collegelocationAlternative>
+              <p>-</p>
+            </ng-template>
+          </div>
+        </div>
+      </div>
+      <div class="professionalQualifications">
+        <div class="subTitle">
+          <h3>Professional Qualifications</h3>
+        </div>
+        <div class="professionalQualificationsForm">
+          <div class="applicantType">
+            <p>Applicant Type</p>
+            <p
+              *ngIf="
+                userInfo &&
+                  userInfo.qualificationForm &&
+                  userInfo.qualificationForm.professionalQualification &&
+                  userInfo.qualificationForm.professionalQualification
+                    .applicant_type;
+                else applicantTypeAlternative
+              "
+              class="data"
+            >
+              {{
+                userInfo.qualificationForm.professionalQualification
+                  .applicant_type.name
+              }}
+            </p>
+            <ng-template #applicantTypeAlternative>
+              <p>-</p>
+            </ng-template>
+          </div>
+        </div>
+        <div class="otherProfessionalQualificationsDetails">
+          <div
+            *ngIf="
+              userInfo &&
+              userInfo.qualificationForm &&
+              userInfo.qualificationForm.professionalQualification &&
+              userInfo.qualificationForm.professionalQualification
+                .applicant_type.name == 'experienced'
+            "
+            class="yearsOfExperience"
+          >
+            <p>Years of Experience</p>
+            <p
+              *ngIf="
+                userInfo &&
+                  userInfo.qualificationForm &&
+                  userInfo.qualificationForm.professionalQualification &&
+                  userInfo.qualificationForm.professionalQualification
+                    .years_of_experience;
+                else yearsOfExperienceAlternative
+              "
+              class="data"
+            >
+              {{
+                userInfo.qualificationForm.professionalQualification
+                  .years_of_experience
+              }}
+            </p>
+            <ng-template #yearsOfExperienceAlternative>
+              <p>-</p>
+            </ng-template>
+          </div>
+          <div
+            *ngIf="
+              userInfo &&
+              userInfo.qualificationForm &&
+              userInfo.qualificationForm.professionalQualification &&
+              userInfo.qualificationForm.professionalQualification
+                .applicant_type.name == 'experienced'
+            "
+            class="currentCtc"
+          >
+            <p>Current CTC (In Rupees)</p>
+            <p
+              *ngIf="
+                userInfo &&
+                  userInfo.qualificationForm &&
+                  userInfo.qualificationForm.professionalQualification &&
+                  userInfo.qualificationForm.professionalQualification
+                    .current_ctc;
+                else currentCtcAlternative
+              "
+              class="data"
+            >
+              {{
+                userInfo.qualificationForm.professionalQualification.current_ctc
+              }}
+            </p>
+            <ng-template #currentCtcAlternative>
+              <p>-</p>
+            </ng-template>
+          </div>
+          <div
+            *ngIf="
+              userInfo &&
+              userInfo.qualificationForm &&
+              userInfo.qualificationForm.professionalQualification &&
+              userInfo.qualificationForm.professionalQualification
+                .applicant_type.name == 'experienced'
+            "
+            class="expectedCtc"
+          >
+            <p>Expected CTC (In Rupees)</p>
+            <p
+              *ngIf="
+                userInfo &&
+                  userInfo.qualificationForm &&
+                  userInfo.qualificationForm.professionalQualification &&
+                  userInfo.qualificationForm.professionalQualification
+                    .expected_ctc;
+                else expectedCtcAlternative
+              "
+              class="data"
+            >
+              {{
+                userInfo.qualificationForm.professionalQualification
+                  .expected_ctc
+              }}
+            </p>
+            <ng-template #expectedCtcAlternative>
+              <p>-</p>
+            </ng-template>
+          </div>
+          <div
+            *ngIf="
+              userInfo &&
+              userInfo.qualificationForm &&
+              userInfo.qualificationForm.professionalQualification &&
+              userInfo.qualificationForm.professionalQualification
+                .applicant_type.name == 'experienced'
+            "
+          >
+            <div class="userExpertTechnology">
+              <p>Select All The Technologies You Expertise In</p>
+              <p
+                *ngIf="
+                  userInfo &&
+                    userInfo.qualificationForm &&
+                    userInfo.qualificationForm.professionalQualification &&
+                    userInfo.qualificationForm.professionalQualification
+                      .user_expert_technology &&
+                    userInfo.qualificationForm.professionalQualification
+                      .user_expert_technology.length;
+                  else userExpertTechnologyAlternative
+                "
+                class="data"
+              >
+                <span
+                  *ngFor="
+                    let technology of userInfo.qualificationForm
+                      .professionalQualification.user_expert_technology
+                  "
+                >
+                  {{ technology.name }}</span
+                >
+              </p>
+              <ng-template #userExpertTechnologyAlternative>
+                <p>-</p>
+              </ng-template>
+            </div>
+          </div>
+          <div
+            *ngIf="
+              userInfo &&
+              userInfo.qualificationForm &&
+              userInfo.qualificationForm.professionalQualification &&
+              userInfo.qualificationForm.professionalQualification
+                .applicant_type.name == 'experienced'
+            "
+            class="userExpertTechnologyOther"
+          >
+            <p>If others, please mention</p>
+            <p
+              *ngIf="
+                userInfo &&
+                  !userInfo.qualificationForm &&
+                  userInfo.qualificationForm.professionalQualification &&
+                  userInfo.qualificationForm.professionalQualification
+                    .user_expert_technology;
+                else userExpertTechnologyAlternative
+              "
+              class="data"
+            >
+              {{
+                userInfo.qualificationForm.professionalQualification
+                  .user_expert_technology
+              }}
+            </p>
+            <ng-template #userExpertTechnologyAlternative>
+              <p>-</p>
+            </ng-template>
+          </div>
+          <div class="userFamiliarTechnology">
+            <p>Select All The Technologies You are familiar In</p>
+            <p
+              *ngIf="
+                userInfo &&
+                  userInfo.qualificationForm &&
+                  userInfo.qualificationForm.professionalQualification &&
+                  userInfo.qualificationForm.professionalQualification
+                    .user_familiar_technology &&
+                  userInfo.qualificationForm.professionalQualification
+                    .user_familiar_technology.length;
+                else userFamiliarTechnologyAlternative
+              "
+              class="data"
+            >
+              <span
+                *ngFor="
+                  let technology of userInfo.qualificationForm
+                    .professionalQualification.user_familiar_technology
+                "
+              >
+                {{ technology.name }}</span
+              >
+            </p>
+            <ng-template #userFamiliarTechnologyAlternative>
+              <p>-</p>
+            </ng-template>
+          </div>
+          <div class="userFamiliarTechnologyOther">
+            <p>If others, please mention</p>
+            <p
+              *ngIf="
+                userInfo &&
+                  !userInfo.qualificationForm &&
+                  userInfo.qualificationForm.professionalQualification &&
+                  userInfo.qualificationForm.professionalQualification
+                    .user_familiar_technology;
+                else userfamiliarTechnologyAlternative
+              "
+              class="data"
+            >
+              {{
+                userInfo.qualificationForm.professionalQualification
+                  .user_familiar_techology
+              }}
+            </p>
+            <ng-template #userfamiliarTechnologyAlternative>
+              <p>-</p>
+            </ng-template>
+          </div>
+          <div class="isThereNoticePeriod">
+            <div class="isThereNoticePeriodOptions">
+              <p>Are you currently on notice period?</p>
+              <p
+                *ngIf="
+                  userInfo &&
+                    userInfo.qualificationForm &&
+                    userInfo.qualificationForm.professionalQualification &&
+                    userInfo.qualificationForm.professionalQualification
+                      .is_there_notice_period;
+                  else isThereNoticePeriodOptionsAlternative
+                "
+                class="data"
+              >
+                {{
+                  userInfo.qualificationForm.professionalQualification
+                    .is_there_notice_period == "true"
+                    ? "Yes"
+                    : "No"
+                }}
+              </p>
+              <ng-template #isThereNoticePeriodOptionsAlternative>
+                <p>-</p>
+              </ng-template>
+            </div>
+          </div>
+          <div
+            *ngIf="
+              userInfo &&
+              userInfo.qualificationForm &&
+              userInfo.qualificationForm.professionalQualification &&
+              userInfo.qualificationForm.professionalQualification
+                .is_there_notice_period == 'true'
+            "
+          >
+            <div class="noticePeriodDuration">
+              <div class="noticePeriodEndDate">
+                <p>If Yes, when will your notice period end?</p>
+                <p
+                  *ngIf="
+                    userInfo &&
+                      userInfo.qualificationForm &&
+                      userInfo.qualificationForm.professionalQualification &&
+                      userInfo.qualificationForm.professionalQualification
+                        .notice_period_end_date;
+                    else noticePeriodEndDateAlternative
+                  "
+                  class="data"
+                >
+                  {{
+                    userInfo.qualificationForm.professionalQualification
+                      .notice_period_end_date
+                  }}
+                </p>
+                <ng-template #noticePeriodEndDateAlternative>
+                  <p>-</p>
+                </ng-template>
+              </div>
+              <div class="noticePeriodLengthInMonths">
+                <p>How long is your notice period? (Mention in months)</p>
+                <p
+                  *ngIf="
+                    userInfo &&
+                      userInfo.qualificationForm &&
+                      userInfo.qualificationForm.professionalQualification &&
+                      userInfo.qualificationForm.professionalQualification
+                        .notice_period_length_in_months;
+                    else noticePeriodLengthInMonthsAlternative
+                  "
+                  class="data"
+                >
+                  {{
+                    userInfo.qualificationForm.professionalQualification
+                      .notice_period_length_in_months
+                  }}
+                </p>
+                <ng-template #noticePeriodLengthInMonthsAlternative>
+                  <p>-</p>
+                </ng-template>
+              </div>
+            </div>
+          </div>
+          <div class="isAppearedPreviously">
+            <p>Have You Appeared For Any Test By Zeus in the past 12 months?</p>
+            <p
+              *ngIf="
+                userInfo &&
+                  userInfo.qualificationForm &&
+                  userInfo.qualificationForm.professionalQualification &&
+                  userInfo.qualificationForm.professionalQualification
+                    .is_appeared_previously;
+                else isAppearedPreviouslyAlternative
+              "
+              class="data"
+            >
+              {{
+                userInfo.qualificationForm.professionalQualification
+                  .is_appeared_previously === "true"
+                  ? "Yes"
+                  : "No"
+              }}
+            </p>
+            <ng-template #isAppearedPreviouslyAlternative>
+              <p>-</p>
+            </ng-template>
+          </div>
+          <div class="roleAppliedFor">
+            <p>If Yes, which role did you apply for?</p>
+            <p
+              *ngIf="
+                userInfo &&
+                  userInfo.qualificationForm &&
+                  userInfo.qualificationForm.professionalQualification &&
+                  userInfo.qualificationForm.professionalQualification
+                    .role_applied_for;
+                else roleAppliedForAlternative
+              "
+              class="data"
+            >
+              {{
+                userInfo.qualificationForm.professionalQualification
+                  .role_applied_for
+              }}
+            </p>
+            <ng-template #roleAppliedForAlternative>
+              <p>-</p>
+            </ng-template>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="btn" routerLink="/register/qualifications">PREVIOUS</button>
+  </form>
+</div>

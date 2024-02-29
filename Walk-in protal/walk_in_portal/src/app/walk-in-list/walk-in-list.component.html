@@ -1,0 +1,54 @@
+<div class="walkInList">
+  <div *ngIf="walkInList && walkInList.length > 0; else noWalkIn">
+    <div class="walkIn" *ngFor="let walkIn of walkInList">
+      <div class="alert" *ngIf="walkIn.expiresIn">
+        <span>{{ walkIn.expiresIn }}</span>
+      </div>
+      <p class="title">{{ walkIn.title }}</p>
+      <div class="dateAndLocation">
+        <p>Date & Time :</p>
+        <div>
+          <span>
+            {{ walkIn.start_date | date : "dd-MMM-yyyy" }} to
+            {{ walkIn.end_date | date : "dd-MMM-yyyy" }}
+          </span>
+          <p>|</p>
+          <img
+            src="../../assets/images/location-dot-solid.svg"
+            alt="location"
+          />
+          <span>{{ walkIn.location }}</span>
+        </div>
+      </div>
+      <hr />
+      <div class="jobRoles">
+        <p>Job Roles :</p>
+        <div class="roles">
+          <p *ngFor="let role of walkIn.jobRoles">
+            <img
+              src="../../assets/images/{{ role.name }}.svg"
+              alt="{{ role.name }} icon"
+            />
+            <span>{{ role.name }}</span>
+          </p>
+        </div>
+      </div>
+      <div
+        class="isOpportunityofMcaStudents"
+        *ngIf="walkIn.is_internship_opportunity_for_mca_students"
+      >
+        <span>Internship Opportunity for MCA Students</span>
+      </div>
+      <div class="btn">
+        <a
+          [title]="walkIn.title + ' details'"
+          [routerLink]="['/walk-in', walkIn.id]"
+          >VIEW MORE DETAILS</a
+        >
+      </div>
+    </div>
+  </div>
+  <ng-template #noWalkIn>
+    <div class="noWalkIn">There is no Walk-In open.</div>
+  </ng-template>
+</div>

@@ -1,0 +1,309 @@
+.reviewAndProceedForm {
+  min-height: 83vh;
+  background-color: #eeeeee;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1vw;
+}
+
+.progressBar {
+  display: flex;
+  width: 88vw;
+  height: 3vh;
+  align-items: center;
+  margin-top: 4vh;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 3vh 4vw 3vh 4vw;
+  font-size: 1.2vw;
+  font-weight: bold;
+}
+
+.progressBar > div {
+  display: flex;
+  align-items: center;
+}
+
+.personalInfo,
+.qualifications,
+.reviewAndProceed {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.checkpoint {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5vh;
+  width: 5vh;
+  margin-right: 1vw;
+  color: #ffffff;
+  background-color: #757575;
+  border-radius: 60%;
+}
+
+.active {
+  color: #333333;
+  background-color: #3fd28b;
+}
+
+hr {
+  width: 21vw;
+  border: 0.18vh solid #eeeeee;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.3vw;
+}
+
+.title img {
+  height: 2.5vh;
+  width: 2.5vw;
+}
+
+
+.editButton{
+  color: #1f7a54;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.personalInfoformData,
+.educationalQualificationsForm,
+.professionalQualificationsForm,
+.otherProfessionalQualificationsDetails {
+  background-color: #ffffff;
+  width: 90vw;
+  padding: 5vh 3vw 2vh 3vw;
+  display: flex;
+}
+
+.leftSide {
+  width: 45vw;
+}
+
+.firstName,
+.lastName,
+.emailId,
+.phoneNumber,
+.portfolioUrl,
+.preferredJobRoles,
+.referrer,
+.aggregatePercentage,
+.yearOfPassing,
+.qualification,
+.stream,
+.collegeNameDropdown,
+.collegeNameOther,
+.collegeLocation,
+.applicantType,
+.currentCtc,
+.expectedCtc,
+.userExpertTechnology,
+.userExpertTechnologyOther,
+.userFamiliarTechnology,
+.userFamiliarTechnologyOther,
+.isThereNoticePeriod,
+.noticePeriodEndDate,
+.noticePeriodLengthInMonths,
+.isAppearedPreviously,
+.roleAppliedFor,
+.yearsOfExperience {
+  display: flex;
+  flex-direction: column;
+}
+
+.firstName p,
+.lastName p,
+.emailId p,
+.phoneNumber p,
+.portfolioUrl p,
+.preferredJobRoles p,
+.referrer p,
+.aggregatePercentage p,
+.yearOfPassing p,
+.qualification p,
+.stream p,
+.collegeNameDropdown p,
+.collegeNameOther p,
+.collegeLocation p,
+.applicantType p,
+.currentCtc p,
+.expectedCtc p,
+.userExpertTechnology p,
+.userExpertTechnologyOther p,
+.userFamiliarTechnology p,
+.userFamiliarTechnologyOther p,
+.isThereNoticePeriod p,
+.noticePeriodEndDate p,
+.noticePeriodLengthInMonths p,
+.isAppearedPreviously p,
+.roleAppliedFor p,
+.yearsOfExperience p {
+  margin: 0;
+}
+
+.firstName p:nth-child(2),
+.lastName p:nth-child(2),
+.emailId p:nth-child(2),
+.phoneNumber p:nth-child(2),
+.portfolioUrl p:nth-child(2),
+.preferredJobRoles p:nth-child(2),
+.referrer p:nth-child(2),
+.aggregatePercentage p:nth-child(2),
+.yearOfPassing p:nth-child(2),
+.qualification p:nth-child(2),
+.stream p:nth-child(2),
+.collegeNameDropdown p:nth-child(2),
+.collegeNameOther p:nth-child(2),
+.collegeLocation p:nth-child(2),
+.applicantType p:nth-child(2),
+.currentCtc p:nth-child(2),
+.expectedCtc p:nth-child(2),
+.userExpertTechnology p:nth-child(2),
+.userExpertTechnologyOther p:nth-child(2),
+.userFamiliarTechnology p:nth-child(2),
+.userFamiliarTechnologyOther p:nth-child(2),
+.isThereNoticePeriod p:nth-child(2),
+.noticePeriodEndDate p:nth-child(2),
+.noticePeriodLengthInMonths p:nth-child(2),
+.isAppearedPreviously p:nth-child(2),
+.roleAppliedFor p:nth-child(2),
+.yearsOfExperience p:nth-child(2) {
+  margin-top: 1.5vh;
+}
+
+.lastName,
+.emailId,
+.phoneNumber,
+.portfolioUrl,
+.preferredJobRoles,
+.referrer,
+.resume,
+.mailListSubcription,
+.yearOfPassing,
+.qualification,
+.stream,
+.collegeNameDropdown,
+.collegeNameOther,
+.collegeLocation,
+.currentCtc,
+.expectedCtc,
+.userExpertTechnology,
+.userExpertTechnologyOther,
+.userFamiliarTechnology,
+.userFamiliarTechnologyOther,
+.isThereNoticePeriod,
+.noticePeriodEndDate,
+.noticePeriodLengthInMonths,
+.isAppearedPreviously,
+.roleAppliedFor,
+.yearsOfExperience {
+  margin-top: 4vh;
+}
+
+.resume,
+.mailListSubcription {
+  display: flex;
+  align-items: center;
+}
+
+.resume p {
+  margin-left: 1vw;
+}
+
+.mailListSubcription p {
+  margin-left: 1vw;
+}
+
+.mailListSubcription img {
+  height: 3vh;
+  width: 3vw;
+  margin-left: -1vw;
+}
+
+.rightSide {
+  margin-left: auto;
+}
+
+.rightSide img {
+  height: 14vh;
+  width: 14vw;
+  border-radius: 50%;
+}
+
+.data {
+  font-weight: bold;
+}
+
+.subTitle {
+  width: 95vw;
+  height: 9vh;
+  padding: 0 0 0 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #dbefff;
+}
+
+.educationalQualificationsForm, .otherProfessionalQualificationsDetails {
+  flex-direction: column;
+  padding-bottom: 8vh;
+  padding-top: 0;
+}
+
+.aggregatePercentage {
+  margin-top: 3vh;
+}
+
+.qualificationAndStream,
+.collegeName,
+.noticePeriodDuration {
+  display: flex;
+  align-items: center;
+}
+
+.qualification,
+.stream,
+.collegeNameDropdown,
+.collegeNameOther,
+.noticePeriodEndDate,
+.noticePeriodLengthInMonths {
+  width: 45vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.professionalQualifications {
+  margin-top: 5vh;
+}
+
+.otherProfessionalQualificationsDetails {
+  margin-top: 2.5vh;
+  flex-direction: column;
+}
+
+.btn{
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  height: 4vh;
+  width: 6vw;
+  border: none;
+  border-radius: .4vh;
+  background-color: #3FD28B;
+  font-size: .8vw;
+}

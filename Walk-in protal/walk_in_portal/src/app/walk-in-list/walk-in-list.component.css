@@ -1,0 +1,248 @@
+.walkInList {
+  min-height: 92.2vh;
+  background-color: #eeeeee;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1vw;
+}
+
+.walkIn {
+  background-color: #ffffff;
+  padding: 1vh 1vw;
+  margin-top: 5vh;
+  width: 90vw;
+  box-shadow: 0 0 5px 2.5px #0000003d;
+}
+
+.alert {
+  font-size: 0.7vw;
+  margin-left: 83vw;
+  margin-top: -2.1vh;
+}
+
+.alert span {
+  padding: 0.2vw;
+  color: #d10107;
+  padding-left: auto;
+  background-color: #ffe4e6;
+  font-weight: 600;
+}
+.title {
+  color: #1f7a54;
+  font-size: 1.3vw;
+  font-weight: 600;
+  margin-top: 1.8vh;
+}
+
+p {
+  margin: 0;
+}
+
+.dateAndLocation {
+  display: flex;
+  flex-direction: column;
+}
+
+.dateAndLocation > p {
+  margin-top: 3vh;
+  font-size: 0.8vw;
+  color: #666666;
+}
+.dateAndLocation > div {
+  margin-top: 1vh;
+  display: flex;
+  align-items: center;
+}
+
+.dateAndLocation > div p,
+.dateAndLocation > div img {
+  margin-left: 0.8vw;
+}
+
+.dateAndLocation > div img {
+  margin-right: 0.2vw;
+}
+
+.dateAndLocation span:nth-child(1) {
+  font-weight: 600;
+}
+
+.dateAndLocation img {
+  height: 2vh;
+  width: 1.1vw;
+}
+
+hr {
+  margin-top: 3vh;
+}
+
+.jobRoles {
+  display: flex;
+  flex-direction: column;
+}
+
+.roles p {
+  margin-top: 1vh;
+  display: flex;
+  align-items: center;
+  color: #222222;
+  font-weight: 600;
+}
+
+.jobRoles > p:nth-child(1) {
+  margin-top: 2vh;
+  font-size: 0.8vw;
+  color: #666666;
+  font-weight: normal;
+}
+
+.roles img {
+  padding: 2px;
+  margin-right: 0.5vw;
+  border: 1px solid #222222;
+  border-radius: 50%;
+}
+
+.roles {
+  display: flex;
+}
+
+.roles p:nth-child(n + 2) {
+  margin-left: 1vh;
+}
+
+.isOpportunityofMcaStudents {
+  margin-top: 2vh;
+}
+.isOpportunityofMcaStudents span {
+  padding: 0.5vh 0.5vw;
+  background-color: #eedd6b;
+  border-radius: 9px;
+  font-size: 0.8vw;
+  font-weight: 600;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2vh;
+}
+
+a {
+  background-color: #3fd28b;
+  padding: 1vh 0.8vw;
+  border: none;
+  margin-bottom: 2vh;
+  font-size: 0.8vw;
+  box-shadow: 0px 3px 5px #0000003d;
+  text-decoration: none;
+  color: #222222;
+}
+
+.noWalkIn{
+  font-size: 3vw;
+  font-weight: 700;
+  margin-top: 40vh;
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+  .walkInList {
+    font-size: 1.3vw;
+  }
+
+  a {
+    font-size: 1.3vw;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 375px) {
+  .walkInList {
+    font-size: 1.8vw;
+  }
+
+  .alert {
+    margin-top: -1.5vh;
+    margin-left: 80vw;
+    font-size: 1vw;
+    width: 10vw;
+  }
+
+  a {
+    font-size: 1.38vw;
+  }
+
+  .title {
+    font-size: 1.6vw;
+  }
+
+  .dateAndLocation > p {
+    font-size: 1.1vw;
+  }
+  .jobRoles > p:nth-child(1) {
+    font-size: 1.4vw;
+  }
+
+  .isOpportunityofMcaStudents span {
+    font-size: 1.2vw;
+  }
+
+  .roles img {
+    margin-right: 0.5vw;
+    border: 1px solid #222222;
+    border-radius: 50%;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .walkInList {
+    font-size: 2.4vw;
+  }
+
+  .walkIn {
+    padding: 1vh 3vw;
+  }
+
+  .alert {
+    margin-top: -1.7vh;
+    margin-left: 75vw;
+    font-size: 1.5vw;
+    width: 20vw;
+  }
+
+  a {
+    font-size: 2vw;
+  }
+
+  .title {
+    font-size: 3.5vw;
+  }
+
+  .dateAndLocation > p{
+    font-size: 2vw;
+  }
+  .jobRoles > p:nth-child(1) {
+    font-size: 2vw;
+  }
+
+  .isOpportunityofMcaStudents span {
+    font-size: 1.2vw;
+  }
+
+  .roles {
+    flex-direction: column;
+  }
+
+  .roles p:nth-child(n + 2) {
+    margin-left: 0;
+  }
+
+  .roles img {
+    width: 4vw;
+    margin-right: 1.5vw;
+    border: 1px solid #222222;
+    border-radius: 50%;
+  }
+}

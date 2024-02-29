@@ -1,0 +1,454 @@
+.qualificationForm {
+  min-height: 83vh;
+  background-color: #eeeeee;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1vw;
+}
+
+.progressBar {
+  display: flex;
+  width: 88vw;
+  height: 3vh;
+  align-items: center;
+  margin-top: 4vh;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 3vh 4vw 3vh 4vw;
+  font-size: 1.2vw;
+  font-weight: bold;
+}
+
+.progressBar > div {
+  display: flex;
+  align-items: center;
+}
+
+.personalInfo,
+.qualifications,
+.reviewAndProceed {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.checkpoint {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5vh;
+  width: 5vh;
+  margin-right: 1vw;
+  color: #ffffff;
+  background-color: #757575;
+  border-radius: 60%;
+}
+
+.active {
+  color: #333333;
+  background-color: #3fd28b;
+}
+
+hr {
+  width: 21vw;
+  border: 0.18vh solid #eeeeee;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.completed {
+  height: 2.4vh;
+  width: 2.4vw;
+}
+
+.title {
+  width: 95vw;
+  height: 9vh;
+  padding: 0 0 0 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4vh;
+  background-color: #dbefff;
+}
+
+.title > .openButton {
+  height: 8.8vh;
+  width: 2.5vw;
+  border-left: 0.1vw solid #757575;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.educationalQaulificationsForm,
+.professionalQualificationsForm,
+.otherProfessionalQualificationsDetails {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+.aggregatePercentage {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-top: 2.5vh;
+  margin-left: 1.5vw;
+}
+
+.aggregatePercentage input {
+  height: 4vh;
+  margin-right: auto;
+}
+
+.aggregatePercentage input::placeholder {
+  font-size: 1vw;
+}
+
+.yearOfPassing {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-top: 5vh;
+  margin-left: 1.5vw;
+}
+
+.yearOfPassing select {
+  height: 4vh;
+  width: 12.8vw;
+  margin-right: auto;
+}
+
+select {
+  margin-top: 1.5vh;
+}
+
+.yearOfPassing input::placeholder {
+  font-size: 1vw;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+  background: transparent;
+  border: none;
+  border-bottom: 0.35vh solid #0000001f;
+}
+
+.qualificationAndStream,
+.collegeName {
+  display: flex;
+  align-items: center;
+  margin-top: 5vh;
+  margin-right: 5vh;
+  margin-left: 1.5vw;
+}
+
+.qualification,
+.stream,
+.collegeNameDropdown,
+.collegeNameOther {
+  width: 45vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.stream,
+.collegeNameOther {
+  margin-left: 2vw;
+}
+
+.collegeNameOther > input {
+  margin-top: 1.5vh;
+}
+
+.collegeLocation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-top: 5vh;
+  margin-left: 1.5vw;
+  margin-bottom: 2.7vh;
+}
+
+.collegeLocation input {
+  height: 4vh;
+  margin-right: auto;
+}
+
+.collegeLocation input::placeholder {
+  font-size: 1vw;
+}
+
+.applicantType {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-top: 2.5vh;
+  margin-left: 1.5vw;
+  margin-bottom: 2.7vh;
+}
+
+.applicantTypeOptions {
+  display: flex;
+  align-items: center;
+  margin-top: 2.5vh;
+  font-size: 1.1vw;
+  font-weight: 600;
+}
+
+.applicantType input[type="radio"] {
+  accent-color: #1f7a54;
+}
+
+.otherProfessionalQualificationsDetails {
+  margin-top: 2vh;
+}
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.yearsOfExperience {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-top: 3vh;
+  margin-left: 1.5vw;
+}
+
+.yearsOfExperience input {
+  height: 3vh;
+  margin-top: 2vh;
+  margin-right: auto;
+}
+
+.yearsOfExperience input::placeholder {
+  font-size: 1vw;
+}
+.currentCtc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-top: 5vh;
+  margin-left: 1.5vw;
+}
+
+.currentCtc input {
+  height: 3vh;
+  margin-top: 2vh;
+  margin-right: auto;
+}
+
+.currentCtc input::placeholder {
+  font-size: 1vw;
+}
+
+.expectedCtc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-top: 5vh;
+  margin-left: 1.5vw;
+}
+
+.expectedCtc input {
+  height: 3vh;
+  margin-top: 2vh;
+  margin-right: auto;
+}
+
+.expectedCtc input::placeholder {
+  font-size: 1vw;
+}
+
+.userExpertTechnology {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-top: 2vh;
+  margin-left: 1.5vw;
+}
+
+.userExpertTechnologyInput{
+  margin-top: 1vh;
+  font-size: 1vw;
+  font-weight: 600;
+}
+
+.userExpertTechnology input[type="checkbox"] {
+  accent-color: #1F7A54;
+}
+
+.userExpertTechnologyOther {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-top: 2vh;
+  margin-left: 1.5vw;
+}
+
+.userExpertTechnologyOther input {
+  height: 3vh;
+  margin-top: 2vh;
+  width: 45vw;
+  margin-right: auto;
+}
+
+.userExpertTechnologyOther input::placeholder {
+  font-size: 1vw;
+}
+
+.userFamiliarTechnology {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-top: 2vh;
+  margin-left: 1.5vw;
+}
+
+.userFamiliarTechnologyInput{
+  margin-top: 1vh;
+  font-size: 1vw;
+  font-weight: 600;
+}
+
+.userFamiliarTechnology input[type="checkbox"] {
+  accent-color: #1F7A54;
+}
+
+.userFamiliarTechnologyOther {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-top: 2vh;
+  margin-left: 1.5vw;
+}
+
+.userFamiliarTechnologyOther input {
+  height: 3vh;
+  margin-top: 2vh;
+  width: 45vw;
+  margin-right: auto;
+}
+
+.userExpertTechnologyOther input::placeholder {
+  font-size: 1vw;
+}
+
+.isThereNoticePeriod {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-top: 5vh;
+  margin-left: 1.5vw;
+  margin-bottom: 2.7vh;
+}
+
+.isThereNoticePeriodOptions {
+  display: flex;
+  align-items: center;
+  margin-top: 2.5vh;
+  font-size: 1.1vw;
+  font-weight: 600;
+}
+
+.isThereNoticePeriod input[type="radio"] {
+  accent-color: #1f7a54;
+}
+
+.noticePeriodDuration {
+  display: flex;
+  align-items: center;
+  margin-top: 5vh;
+  margin-right: 5vh;
+  margin-left: 1.5vw;
+}
+
+.noticePeriodEndDate,
+.noticePeriodLengthInMonths {
+  width: 45vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.noticePeriodLengthInMonths {
+  margin-left: 2vw;
+}
+
+.noticePeriodEndDate > input {
+  margin-top: 1.5vh;
+}
+
+.isAppearedPreviously {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-top: 5vh;
+  margin-left: 1.5vw;
+  margin-bottom: 2.7vh;
+}
+
+.isAppearedPreviouslyOptions {
+  display: flex;
+  align-items: center;
+  margin-top: 2.5vh;
+  font-size: 1.1vw;
+  font-weight: 600;
+}
+
+.isAppearedPreviously input[type="radio"] {
+  accent-color: #1f7a54;
+}
+
+.roleAppliedFor {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-top: 2vh;
+  padding-bottom: 3.2vh;
+  margin-left: 1.5vw;
+}
+
+.roleAppliedFor input {
+  height: 3vh;
+  margin-top: 2vh;
+  width: 45vw;
+  margin-right: auto;
+}
+
+.roleAppliedFor input::placeholder {
+  font-size: 1vw;
+}
+
+.buttons{
+  display: flex;
+  align-items: center;
+  margin-bottom: 3vh;
+}
+
+input[type="submit"],button{
+  margin-top: 5vh;
+  height: 4vh;
+  width: 6vw;
+  border: none;
+  border-radius: .4vh;
+  background-color: #3FD28B;
+  font-size: .8vw;
+}
+
+input[type="submit"]{
+  margin-left: 2vw;
+}

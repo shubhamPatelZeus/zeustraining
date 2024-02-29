@@ -1,0 +1,163 @@
+<div class="walkInDetails" id="walkInDetails">
+  <form
+    ngNativeValidate
+    (ngSubmit)="onSubmit()"
+    [formGroup]="waklInApplicationForm"
+    *ngIf="walkIn"
+  >
+    <div class="mainBody">
+      <div class="basicDetails">
+        <div class="title">
+          <p>{{ walkIn.title }}</p>
+          <input
+            type="submit"
+            value="APPLY"
+            [disabled]="
+              waklInApplicationForm.controls.preferedRoles.length < 2 ||
+              !waklInApplicationForm.controls.timeSlot
+            "
+            [ngStyle]="{
+              opacity:
+                waklInApplicationForm.controls.preferedRoles.length < 2 ||
+                !waklInApplicationForm.controls.timeSlot
+                  ? '.5'
+                  : '1'
+            }"
+          />
+        </div>
+        <div class="dateAndLocation">
+          <p>Date & Time :</p>
+          <div>
+            <span>
+              {{ walkIn.start_date | date : "dd-MMM-yyyy" }} to
+              {{ walkIn.end_date | date : "dd-MMM-yyyy" }}
+            </span>
+            <p>|</p>
+            <img
+              src="../../assets/images/location-dot-solid.svg"
+              alt="location"
+            />
+            <span>{{ walkIn.location }}</span>
+          </div>
+        </div>
+        <hr />
+        <div class="jobRoles">
+          <p>Job Roles :</p>
+          <div class="roles">
+            <p *ngFor="let role of walkIn.jobRoles">
+              <img
+                src="../../assets/images/{{ role.name }}.svg"
+                alt="{{ role.name }} icon"
+              />
+              <span>{{ role.name }}</span>
+            </p>
+          </div>
+        </div>
+        <div
+          class="isOpportunityofMcaStudents"
+          *ngIf="walkIn.is_internship_opportunity_for_mca_students"
+        >
+          <span>Internship Opportunity for MCA Students</span>
+        </div>
+      </div>
+      <div class="preRequisitesAndApplicationProcess">
+        <div class="subTitle">
+          <h3>Pre-requisites & Application Process</h3>
+          <div
+            class="openButton"
+            (click)="togglePreRequisitesAndApplicationProcessForm()"
+          >
+            <img
+              src="../../assets/images/expand_less_black_24dp.svg"
+              alt="drop down"
+              [ngStyle]="{
+                transform: isPreRequisitesAndApplicationProcessOpen
+                  ? 'rotate(0)'
+                  : 'rotate(180deg)'
+              }"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="preRequisitesAndApplicationProcessDetails"
+        *ngIf="isPreRequisitesAndApplicationProcessOpen"
+      >
+        <div class="generalInstructions">
+          <p>General Instructions :</p>
+          <p>
+            {{ walkIn.generalInstructions }}
+          </p>
+        </div>
+        <hr />
+        <div class="instructionsForTheExam">
+          <p>Instructions for the Exam :</p>
+          <p>
+            {{ walkIn.instructionsForTheExam }}
+          </p>
+        </div>
+        <hr />
+        <div class="minimumSystemRequirements">
+          <p>Minimum System Requirements :</p>
+          <p>
+            {{ walkIn.minimumSystemRequirements }}
+          </p>
+        </div>
+        <hr />
+        <div class="process">
+          <p>Process :</p>
+          <p>
+            {{ walkIn.process }}
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="timeSlotAndPreferences">
+      <p>Time Slots & Preferences</p>
+      <div class="selectTimeSlots">
+        <label for="timeSlot">Select a Time Slot :</label>
+        <p *ngFor="let timeSlot of walkIn.timeSlots">
+          <input
+            type="radio"
+            id="{{ timeSlot.id }}"
+            name="timeSlot"
+            value="{{ timeSlot.id }}"
+            formControlName="timeSlot"
+          />
+          <span
+            >{{ timeSlot.timeSlotStart | date : "shortTime" }} to
+            {{ timeSlot.timeSlotEnd | date : "shortTime" }}</span
+          >
+        </p>
+      </div>
+      <hr />
+      <div class="selectPreferedRoles">
+        <label>Select Your Preference :</label>
+        <div class="jobRole" *ngFor="let role of walkIn.jobRoles">
+          <input
+            name="{{ role.name }}"
+            type="checkbox"
+            id="{{ role.name }}"
+            (change)="onPreferedRoleChange(role.id, $event)"
+          />
+          <span>
+            {{ role.name }}
+          </span>
+        </div>
+      </div>
+      <hr />
+      <div class="uploadResume">
+        <input type="file" id="resume" name="resume" (change)="handleFileInput($event)"/>
+        <span>UPLOAD UPDATE RESUME</span>
+      </div>
+    </div>
+    <div class="roleDescription" *ngFor="let role of walkIn.jobRoles">
+      <app-job-role-description
+        [jobRoleDescription]="role"
+      ></app-job-role-description>
+    </div>
+  </form>
+  <div class="scrollToTop" (click)="scrollToTop()">
+    <img src="../../assets/images/arrow_upward_black_24dp.svg" alt="" />
+  </div>
+</div>

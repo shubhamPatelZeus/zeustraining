@@ -1,0 +1,524 @@
+.walkInDetails {
+  min-height: 92.2vh;
+  background-color: #eeeeee;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1vw;
+}
+.mainBody {
+  box-shadow: 0 0 5px 2.5px #0000003d;
+  min-height: 35vh;
+}
+
+.basicDetails,
+.timeSlotAndPreferences {
+  background-color: #ffffff;
+  padding: 1vh 1vw;
+  margin-top: 5vh;
+  width: 90vw;
+  padding-bottom: 3vh;
+}
+
+.apply span {
+  padding: 0.2vw;
+  color: #d10107;
+  padding-left: auto;
+  background-color: #ffe4e6;
+  font-weight: 600;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #1f7a54;
+  font-size: 1.3vw;
+  font-weight: 600;
+  margin-top: 1.8vh;
+}
+
+.title input[type="submit"] {
+  background-color: #3fd28b;
+  padding: 1vh 1.2vw;
+  border: none;
+  font-size: 0.8vw;
+  box-shadow: 0px 3px 5px #0000003d;
+  text-decoration: none;
+  color: #25313f;
+}
+
+p {
+  margin: 0;
+}
+
+.dateAndLocation {
+  display: flex;
+  flex-direction: column;
+}
+
+.dateAndLocation > p {
+  margin-top: 3vh;
+  font-size: 0.8vw;
+  color: #666666;
+}
+.dateAndLocation > div {
+  margin-top: 1vh;
+  display: flex;
+  align-items: center;
+}
+
+.dateAndLocation > div p,
+.dateAndLocation > div img {
+  margin-left: 0.8vw;
+}
+
+.dateAndLocation > div img {
+  margin-right: 0.2vw;
+}
+
+.dateAndLocation span:nth-child(1) {
+  font-weight: 600;
+}
+
+.dateAndLocation img {
+  height: 2vh;
+  width: 1.1vw;
+}
+
+hr {
+  margin-top: 3vh;
+}
+
+.jobRoles {
+  display: flex;
+  flex-direction: column;
+}
+
+.roles p {
+  margin-top: 1vh;
+  display: flex;
+  align-items: center;
+  color: #1f7a54;
+  font-weight: 600;
+}
+
+.jobRoles > p:nth-child(1) {
+  margin-top: 2vh;
+  font-size: 0.8vw;
+  color: #666666;
+  font-weight: normal;
+}
+
+.roles img {
+  padding: 2px;
+  margin-right: 0.5vw;
+  border: 1px solid #222222;
+  border-radius: 50%;
+}
+
+.roles {
+  display: flex;
+}
+
+.roles p:nth-child(n + 2) {
+  margin-left: 1vh;
+}
+
+.isOpportunityofMcaStudents {
+  margin-top: 2vh;
+}
+.isOpportunityofMcaStudents span {
+  padding: 0.5vh 0.5vw;
+  background-color: #eedd6b;
+  border-radius: 9px;
+  font-size: 0.8vw;
+  font-weight: 600;
+}
+
+.subTitle {
+  width: 90vw;
+  height: 5vh;
+  display: flex;
+  padding: 1vh 1vw;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #dbefff;
+}
+
+.subTitle > .openButton {
+  height: 6.8vh;
+  width: 2.5vw;
+  border-left: 0.1vw solid #757575;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 1vw;
+}
+
+.preRequisitesAndApplicationProcessDetails {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  overflow:hidden;
+}
+
+.process,
+.instructionsForTheExam,
+.minimumSystemRequirements,
+.generalInstructions {
+  display: flex;
+  flex-direction: column;
+  margin: 1vh 1vw;
+}
+
+.preRequisitesAndApplicationProcessDetails hr {
+  height: 0.1vh;
+  width: 90vw;
+}
+
+.process p,
+.instructionsForTheExam p,
+.minimumSystemRequirements p,
+.generalInstructions p {
+  margin-top: 0.5vh;
+  color: #222222;
+  font-weight: 600;
+}
+
+.process p:nth-child(2),
+.instructionsForTheExam p:nth-child(2),
+.minimumSystemRequirements p:nth-child(2),
+.generalInstructions p:nth-child(2) {
+  margin-top: 1vh;
+}
+
+.process p:nth-child(1),
+.instructionsForTheExam p:nth-child(1),
+.minimumSystemRequirements p:nth-child(1),
+.generalInstructions p:nth-child(1) {
+  color: #666666;
+  font-weight: normal;
+}
+.process {
+  margin-bottom: 4vh;
+}
+
+.timeSlotAndPreferences {
+  box-shadow: 0 0 5px 2.5px #0000003d;
+  display: flex;
+  flex-direction: column;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  accent-color: #1f7a54;
+}
+
+.timeSlotAndPreferences p:nth-child(1) {
+  font-size: 1.1vw;
+  font-weight: 600;
+  color: #222222;
+}
+
+.selectTimeSlots {
+  margin-top: 3vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.selectTimeSlots label {
+  margin-bottom: 2vh;
+  font-size: 0.8vw;
+}
+
+.selectTimeSlots p {
+  color: #222222;
+  font-weight: 600;
+  margin: 1vh 0;
+  display: flex;
+  align-items: center;
+}
+
+.selectTimeSlots p input[type="radio"] {
+  margin-right: 0.65vw;
+}
+
+.timeSlotAndPreferences hr {
+  width: 90vw;
+}
+
+.selectPreferedRoles {
+  margin-top: 3vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.selectPreferedRoles label {
+  margin-bottom: 2vh;
+  font-size: 0.8vw;
+}
+
+.selectPreferedRoles span {
+  color: #222222;
+  font-weight: 600;
+  margin: 1vh 0;
+  display: flex;
+  align-items: center;
+}
+
+.selectPreferedRoles .jobRole input[type="checkbox"] {
+  margin-right: 0.65vw;
+}
+
+.jobRole {
+  display: flex;
+  align-items: center;
+}
+
+.uploadResume {
+  height: 6vh;
+  width: 6vw;
+  background-image: url("../../assets/images/Upload_black_24dp.svg");
+  background-size: 3vh 3vw;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.uploadResume input[type="file"] {
+  opacity: 0;
+  background-color: white;
+  width: 9vw;
+  z-index: 1;
+}
+
+.uploadResume span {
+  position: absolute;
+  left: 6.25vw;
+  padding-left: auto;
+  color: #1f7a54;
+}
+
+.roleDescription {
+  box-shadow: 0 0 5px 2.5px #0000003d;
+  margin: 3vh 0;
+}
+
+.scrollToTop {
+  background-color: #3fd28b;
+  position: fixed;
+  top: 94vh;
+  left: 93vw;
+  border-radius: 50%;
+  padding: 0.3vw;
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+  .walkInDetails {
+    font-size: 1.2vw;
+  }
+
+  .apply {
+    font-size: 0.9vw;
+  }
+
+  .title {
+    font-size: 1.5vw;
+  }
+
+  .title input[type="submit"] {
+    font-size: 1vw;
+  }
+
+  .dateAndLocation > p {
+    font-size: 1vw;
+  }
+
+  .jobRoles > p:nth-child(1) {
+    font-size: 1vw;
+  }
+
+  .isOpportunityofMcaStudents span {
+    font-size: 1vw;
+  }
+
+  .timeSlotAndPreferences p:nth-child(1) {
+    font-size: 1.3vw;
+  }
+
+  .selectTimeSlots label {
+    font-size: 1vw;
+  }
+
+  .selectPreferedRoles label {
+    font-size: 1vw;
+  }
+  .scrollToTop {
+    padding: 0.2vw;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 375px) {
+  .walkInDetails {
+    font-size: 1.4vw;
+  }
+
+  .apply {
+    font-size: 1.4vw;
+  }
+
+  .title {
+    font-size: 2vw;
+  }
+
+  .title input[type="submit"] {
+    font-size: 1.5vw;
+  }
+
+  .dateAndLocation > p {
+    font-size: 1.5vw;
+  }
+
+  .jobRoles > p:nth-child(1) {
+    font-size: 1.5vw;
+  }
+
+  .isOpportunityofMcaStudents span {
+    font-size: 1.5vw;
+  }
+
+  .timeSlotAndPreferences p:nth-child(1) {
+    font-size: 1.8vw;
+  }
+
+  .selectTimeSlots label {
+    font-size: 1.8vw;
+  }
+
+  .selectTimeSlots p {
+    font-size: 2vw;
+  }
+
+  .selectPreferedRoles label {
+    font-size: 1.8vw;
+  }
+
+  .uploadResume span {
+    font-size: 2vw;
+    left: 6.5vw;
+  }
+  .scrollToTop {
+    padding: 0.5vw;
+  }
+
+  .roles img {
+    width: 2vw;
+    height: 2vw;
+  }
+
+  .jobRole span {
+    font-size: 2vw;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .walkInDetails {
+    font-size: 2.5vw;
+  }
+
+  .basicDetails,
+  .timeSlotAndPreferences,
+  .preRequisitesAndApplicationProcessDetails {
+    padding: 1vh 3vw;
+    width: 90vw;
+  }
+
+  .title {
+    font-size: 5.8vw;
+    margin-left: 5vw;
+    margin-top: 0;
+    color: #222222;
+  }
+
+  .title input[type="submit"] {
+    position: fixed;
+    top: 96vh;
+    left: 0;
+    width: 100vw;
+    height: 4vh;
+    font-size: 2.5vw;
+  }
+
+  .subTitle {
+    padding: 1vh 3vw;
+  }
+
+  .dateAndLocation > p {
+    font-size: 3vw;
+  }
+
+  .jobRoles > p:nth-child(1) {
+    font-size: 3vw;
+  }
+
+  .openButton img {
+    width: 4vw;
+  }
+
+  .isOpportunityofMcaStudents span {
+    font-size: 2.5vw;
+  }
+
+  .timeSlotAndPreferences p:nth-child(1) {
+    font-size: 2.8vw;
+  }
+
+  .selectTimeSlots label {
+    font-size: 2.8vw;
+  }
+
+  .selectTimeSlots p {
+    font-size: 3vw;
+  }
+
+  .selectPreferedRoles label {
+    font-size: 2.8vw;
+  }
+
+  .uploadResume span {
+    font-size: 3vw;
+    left: 7.8vw;
+    margin-top: -2vh;
+  }
+  .scrollToTop {
+    padding: 1.5vw;
+  }
+
+  .roles img {
+    width: 3vw;
+    height: 3vw;
+  }
+
+  .roles {
+    flex-direction: column;
+  }
+
+  .roles p:nth-child(n + 2) {
+    margin-left: 0;
+  }
+
+  .jobRole span {
+    font-size: 3vw;
+  }
+
+  .scrollToTop {
+    top: 87vh;
+  }
+
+  .scrollToTop img {
+    width: 5vw;
+    height: 5vw;
+  }
+}

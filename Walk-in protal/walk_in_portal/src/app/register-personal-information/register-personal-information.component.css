@@ -1,0 +1,318 @@
+.personalInfoForm {
+  min-height: 158vh;
+  background-color: #eeeeee;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1vw;
+}
+
+.progressBar {
+  display: flex;
+  width: 88vw;
+  height: 3vh;
+  align-items: center;
+  margin-top: 4vh;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 3vh 4vw 3vh 4vw;
+  font-size: 1.2vw;
+  font-weight: bold;
+}
+
+.progressBar > div {
+  display: flex;
+  align-items: center;
+}
+
+.personalInfo,
+.qualifications,
+.reviewAndProceed {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.checkpoint {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5vh;
+  width: 5vh;
+  margin-right: 1vw;
+  color: #ffffff;
+  background-color: #757575;
+  border-radius: 60%;
+}
+
+.active {
+  color: #333333;
+  background-color: #3fd28b;
+}
+
+hr {
+  width: 21vw;
+  border: 0.18vh solid #eeeeee;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formData {
+  background-color: #ffffff;
+  width: 90vw;
+  margin-top: 4vh;
+  padding: 5vh 3vw 2vh 3vw;
+  display: flex;
+}
+
+.leftSide {
+  width: 45vw;
+}
+
+.first_name {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.first_name input {
+  height: 4vh;
+}
+
+.first_name input::placeholder {
+  font-size: 1vw;
+}
+
+.last_name {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-top: 5vh;
+}
+
+.last_name input {
+  height: 4vh;
+}
+
+.last_name input::placeholder {
+  font-size: 1vw;
+}
+
+.email_id {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-top: 5vh;
+}
+
+.email_id input {
+  height: 4vh;
+}
+
+.email_id input::placeholder {
+  font-size: 1vw;
+}
+.password {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-top: 5vh;
+}
+
+.password input {
+  height: 4vh;
+}
+
+.password input::placeholder {
+  font-size: 1vw;
+}
+
+input[type="email"],
+input[type="text"],
+input[type="password"] {
+  background: transparent;
+  border: none;
+  border-bottom: 0.35vh solid #0000001f;
+}
+
+label {
+  color: #666666;
+}
+
+.phone_number {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-top: 4vh;
+}
+
+countryCodeAndPhoneNumberInput {
+  display: flex;
+  align-items: center;
+}
+
+.phoneNumberInput,
+.countryCodeInput {
+  margin-left: 0.5vw;
+  width: 1.5vw;
+  margin-top: 3vh;
+}
+
+.phoneNumberInput {
+  width: 10vw;
+}
+.countryCodeInput {
+  width: 1.5vw;
+}
+
+.resume {
+  margin-top: 4vh;
+  height: 6vh;
+  width: 6vw;
+  background-image: url("../../assets/images/Upload_black_24dp.svg");
+  background-size: 3vh 3vw;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.resume input[type="file"] {
+  opacity: 0;
+  background-color: white;
+  width: 9vw;
+  z-index: 1;
+}
+
+.resume span {
+  position: absolute;
+  left: 6.25vw;
+  padding-left: auto;
+  color: #1f7a54;
+}
+
+.portfolio_url {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-top: 5vh;
+}
+
+.portfolio_url input {
+  height: 4vh;
+}
+
+.portfolio_url input::placeholder {
+  font-size: 1vw;
+}
+
+.preferredJobRoles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 5vh;
+}
+
+.preferredJobRoles img {
+  width: 1.3vw;
+  margin-left: -0.15vw;
+  margin-right: 0.5vw;
+}
+
+.softwareEngineer,
+.softwareQualityEngineer,
+.instructionalDesigner {
+  color: #222222;
+  font-weight: bold;
+  display: flex;
+}
+
+.jobRoles {
+  margin-top: 2vh;
+  margin-left: -0.3vw;
+}
+
+.jobRolesList{
+  display: flex;
+  align-items: center;
+}
+
+.jobRolesList label{
+  margin-left: 1vh;
+  font-weight: 600;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  accent-color: #1f7a54;
+}
+
+.referrer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-top: 5vh;
+}
+
+.referrer input {
+  height: 4vh;
+}
+
+.referrer input::placeholder {
+  font-size: 1vw;
+}
+
+.mailListSubcription {
+  display: flex;
+  align-items: center;
+  margin-top: 5vh;
+}
+
+.mailListSubcription img {
+  width: 1.3vw;
+  margin-left: -0.15vw;
+  margin-right: 0.5vw;
+}
+
+.rightSide {
+  margin-left: auto;
+  margin-right: 2vw;
+}
+
+.userImage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../../assets/images/circle-user-solid.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.userImage p {
+  margin-top: -2vh;
+  color: #1f7a54;
+  font-weight: 600;
+}
+
+.userImage input[type="file"] {
+  opacity: 0;
+  height: 32vh;
+  width: 40vw;
+  background-color: white;
+  width: 9vw;
+  z-index: 1;
+}
+
+input[type="submit"] {
+  margin-top: 5vh;
+  height: 4vh;
+  width: 6vw;
+  border: none;
+  border-radius: 0.4vh;
+  background-color: #3fd28b;
+  font-size: 1vw;
+}

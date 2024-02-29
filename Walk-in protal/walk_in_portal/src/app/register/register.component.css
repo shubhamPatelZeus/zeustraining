@@ -1,0 +1,36 @@
+.registerHead{
+  background-color: #3C4E62;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1vw;
+  height: 9vh;
+}
+
+.backButton{
+  margin-left: 1vw;
+}
+
+.registerHead p{
+  color: #FFFFFF;
+  font-size: 1.5vw;
+  margin-left: 10.5vw;
+
+}
+
+.buttons{
+  width: 14vw;
+  margin-right: 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.buttons button{
+  background-color: #3FD28B;
+  border: none;
+  height: 5vh;
+  width: 6vw;
+  font-size: 1vw;
+  border-radius: .2vh;
+}

@@ -1,0 +1,289 @@
+.login {
+  height: 92.5vh;
+  background-color: #eeeeee;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1vw;
+}
+
+form {
+  min-height: 60vh;
+  width: 35vw;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 13vh;
+  border-top: 0.5vh solid #3ac7ec;
+}
+
+a {
+  color: #1f7a54;
+  text-decoration: none;
+}
+
+.emailInput {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+}
+.emailInput input {
+  height: 4vh;
+}
+.emailInput input::placeholder {
+  font-size: 1vw;
+}
+
+.emailInput a {
+  margin-top: 0.5vh;
+  margin-left: auto;
+}
+
+.passwordInput {
+  margin-top: 1vh;
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  width: 30vw;
+}
+
+.passwordInput input {
+  height: 4vh;
+  /* background-image: url(../../assets/images/visibility_black_24dp.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 3.5vh 3.5vw; */
+}
+.passwordInput input::placeholder {
+  font-size: 1vw;
+}
+
+.passwordInput img {
+  position: relative;
+  top: -3.8vh;
+  left: 27.5vw;
+  cursor: pointer;
+}
+
+.passwordInput a {
+  margin-top: -2.7vh;
+  margin-left: auto;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #0000001f;
+}
+
+input[type="email"]:focus {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #0000001f;
+}
+
+.rememberMe {
+  margin-right: auto;
+  margin-left: 2.3vw;
+  margin-top: 11vh;
+  display: flex;
+  align-items: center;
+}
+
+.rememberMe p {
+  font-weight: bold;
+  font-size: 1.15vw;
+}
+
+img {
+  height: 3.2vh;
+  width: 3.2vw;
+}
+
+.errorMsg {
+  color: red;
+}
+
+input[type="submit"] {
+  background-color: #3fd28b;
+  border: none;
+  height: 4vh;
+  font-size: 1vw;
+  width: 10vw;
+}
+
+.register {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.register p {
+  margin-bottom: 0;
+}
+
+.register a {
+  margin-top: 0;
+}
+
+.footer {
+  width: 10vw;
+  margin-top: 10vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer span {
+  color: #0000001f;
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+  .login {
+    font-size: 1.2vw;
+  }
+  .emailInput input::placeholder {
+    font-size: 1.2vw;
+  }
+  .passwordInput input::placeholder {
+    font-size: 1.2vw;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 375px) {
+  .login {
+    font-size: 1.6vw;
+  }
+
+  form {
+    height: 70vh;
+    width: 75vw;
+    margin-top: 13vh;
+    border-top: 0.5vh solid #3ac7ec;
+  }
+
+  .emailInput {
+    width: 70vw;
+  }
+
+  .emailInput input::placeholder {
+    font-size: 2vw;
+  }
+
+  .passwordInput {
+    margin-top: 1vh;
+    width: 70vw;
+  }
+
+  .passwordInput input::placeholder {
+    font-size: 2.4vw;
+  }
+
+  .passwordInput img {
+    position: relative;
+    top: -3.8vh;
+    left: 66vw;
+    cursor: pointer;
+  }
+
+  .rememberMe {
+    margin-left: 2.3vw;
+    margin-top: 10vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .rememberMe p {
+    font-weight: bold;
+    margin-left: 1vw;
+    font-size: 2.15vw;
+  }
+  img {
+    height: 3.2vh;
+    width: 3.2vw;
+  }
+
+  input[type="submit"] {
+    background-color: #3fd28b;
+    border: none;
+    height: 3vh;
+    font-size: 1.7vw;
+    width: 11vw;
+  }
+
+  .footer {
+    width: 17vw;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .login {
+    font-size: 2.4vw;
+  }
+
+  form {
+    height: 70vh;
+    width: 85vw;
+    margin-top: 13vh;
+    border-top: 0.5vh solid #3ac7ec;
+  }
+
+  .emailInput {
+    width: 75vw;
+  }
+
+  .emailInput input::placeholder {
+    font-size: 2.4vw;
+  }
+
+  .passwordInput {
+    margin-top: 1vh;
+    width: 75vw;
+  }
+
+  .passwordInput input::placeholder {
+    font-size: 2.4vw;
+  }
+
+  .passwordInput img {
+    position: relative;
+    top: -3.5vh;
+    left: 68.9vw;
+    cursor: pointer;
+  }
+
+  .rememberMe {
+    margin-left: 5vw;
+    margin-top: 10vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .rememberMe p {
+    font-weight: bold;
+    margin-left: 1vw;
+    font-size: 2.15vw;
+  }
+  img {
+    height: 3.2vh;
+    width: 3.2vw;
+  }
+
+  input[type="submit"] {
+    background-color: #3fd28b;
+    border: none;
+    height: 3vh;
+    font-size: 1.7vw;
+    width: 14vw;
+  }
+
+  .footer {
+    width: 20vw;
+  }
+}

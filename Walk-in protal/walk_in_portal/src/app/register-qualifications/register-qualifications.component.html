@@ -1,0 +1,458 @@
+<div class="qualificationForm">
+  <div class="progressBar">
+    <div class="personalInfo">
+      <p class="checkpoint active">
+        <img
+          class="completed"
+          src="../../assets/images/pen-solid.svg"
+          alt="compeleted"
+        />
+      </p>
+      <p>Personal Information</p>
+    </div>
+    <hr />
+    <div class="qualifications">
+      <p class="checkpoint active">2</p>
+      <p>Qualifications</p>
+    </div>
+    <hr />
+    <div class="reviewAndProceed">
+      <p class="checkpoint">3</p>
+      <p>Review and Proceed</p>
+    </div>
+  </div>
+  <form
+    ngNativeValidate
+    [formGroup]="qualificationsForm"
+    (ngSubmit)="onSubmit()"
+  >
+    <div class="educationalQaulifications">
+      <div class="title">
+        <h3>Educational Qualifications</h3>
+        <div class="openButton" (click)="toggleEducationalQaulificationsForm()">
+          <img
+            src="../../assets/images/expand_less_black_24dp.svg"
+            alt="drop down"
+            [ngStyle]="{
+              transform: isEducationalQaulificationsFormOpen
+                ? 'rotate(0)'
+                : 'rotate(180deg)'
+            }"
+          />
+        </div>
+      </div>
+      <div
+        class="educationalQaulificationsForm"
+        *ngIf="isEducationalQaulificationsFormOpen"
+        formGroupName="educationalQualification"
+      >
+        <div class="aggregatePercentage">
+          <label for="aggregatePercentage">Aggregate Percentage*</label>
+          <input
+            type="text"
+            id="aggregatePercentage"
+            name="aggregatePercentage"
+            required
+            formControlName="aggregate_percentage"
+          />
+        </div>
+        <div class="yearOfPassing">
+          <label for="yearOfPassing">Year of Passing*</label>
+          <select
+            id="yearOfPassing"
+            name="yearOfPassing"
+            formControlName="year_of_passing"
+            required
+          >
+            <option
+              *ngFor="let year of getYears(2015).years"
+              value="{{ year }}"
+            >
+              {{ year }}
+            </option>
+          </select>
+        </div>
+        <div class="qualificationAndStream">
+          <div class="qualification">
+            <label for="qualification">Qualification*</label>
+            <select
+              id="qualification"
+              name="qualification"
+              formControlName="qualification_type"
+            >
+              <option
+                *ngFor="let qualification of qualifications"
+                [ngValue]="qualification"
+              >
+                {{ qualification.name }}
+              </option>
+            </select>
+          </div>
+          <div class="stream">
+            <label for="stream">Stream*</label>
+            <select id="stream" name="stream" formControlName="stream_type">
+              <option *ngFor="let stream of streams" [ngValue]="stream">
+                {{ stream.name }}
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class="collegeName">
+          <div class="collegeNameDropdown">
+            <label for="collegeName">College*</label>
+            <select
+              id="collegeName"
+              name="collegeName"
+              formControlName="college_name"
+              required
+            >
+              <option *ngFor="let college of colleges" [ngValue]="college">
+                {{ college.name }}
+              </option>
+            </select>
+          </div>
+          <div class="collegeNameOther">
+            <label for="collegeName"
+              >If others, please enter your college name</label
+            >
+            <input type="text" id="collegeName" name="collegeName" />
+          </div>
+        </div>
+        <div class="collegeLocation">
+          <label for="collegeLocation">Where is your college located?*</label>
+          <input
+            type="text"
+            id="collegeLocation"
+            name="collegeLocation"
+            formControlName="college_location"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="professionalQualifications"
+      formGroupName="professionalQualification"
+    >
+      <div class="title">
+        <h3>Professional Qualifications</h3>
+        <div
+          class="openButton"
+          (click)="toggleProfessionalQualificationsForm()"
+        >
+          <img
+            src="../../assets/images/expand_less_black_24dp.svg"
+            alt="drop down"
+            [ngStyle]="{
+              transform: isProfessionalQualificationsFormOpen
+                ? 'rotate(0)'
+                : 'rotate(180deg)'
+            }"
+          />
+        </div>
+      </div>
+      <div
+        class="professionalQualificationsForm"
+        *ngIf="isProfessionalQualificationsFormOpen"
+      >
+        <div class="applicantType">
+          <label for="applicantType">Applicant Type*</label>
+          <div class="applicantTypeOptions">
+            <div *ngFor="let applicantType of applicantTypes">
+              <input
+                type="radio"
+                id="{{ applicantType.id }}"
+                name="applicant_type"
+                [value]="applicantType"
+                formControlName="applicant_type"
+              />
+              <label for="{{ applicantType.name }}">{{
+                applicantType.name[0].toUpperCase() +
+                  applicantType.name.slice(1)
+              }}</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        *ngIf="
+          isProfessionalQualificationsFormOpen &&
+          qualificationsForm.controls.professionalQualification.controls
+            .applicant_type.value?.name.length
+        "
+        class="otherProfessionalQualificationsDetails"
+      >
+        <div
+          *ngIf="
+            qualificationsForm.controls.professionalQualification.controls
+              .applicant_type.value.name == 'experienced'
+          "
+        >
+          <fieldset
+            class="yearsOfExperience"
+            [disabled]="
+              qualificationsForm.controls.professionalQualification.controls
+                .applicant_type.value.name != 'experienced'
+            "
+          >
+            <label for="yearsOfExperience">Years of Experience*</label>
+            <input
+              type="number"
+              id="yearsOfExperience"
+              name="yearsOfExperience"
+              required
+              formControlName="years_of_experience"
+            />
+          </fieldset>
+        </div>
+        <div
+          *ngIf="
+            qualificationsForm.controls.professionalQualification.controls
+              .applicant_type.value.name == 'experienced'
+          "
+        >
+          <fieldset
+            [disabled]="
+              qualificationsForm.controls.professionalQualification.controls
+                .applicant_type.value.name != 'experienced'
+            "
+            class="currentCtc"
+          >
+            <label for="currentCtc">Current CTC* (In Rupees)</label>
+            <input
+              type="number"
+              id="currentCtc"
+              name="currentCtc"
+              required
+              formControlName="current_ctc"
+            />
+          </fieldset>
+        </div>
+        <div
+          *ngIf="
+            qualificationsForm.controls.professionalQualification.controls
+              .applicant_type.value.name == 'experienced'
+          "
+        >
+          <fieldset
+            [disabled]="
+              qualificationsForm.controls.professionalQualification.controls
+                .applicant_type.value.name != 'experienced'
+            "
+            class="expectedCtc"
+          >
+            <label for="expectedCtc">Expected CTC* (In Rupees)</label>
+            <input
+              type="number"
+              id="expectedCtc"
+              name="expectedCtc"
+              required
+              formControlName="expected_ctc"
+            />
+          </fieldset>
+        </div>
+        <div
+          *ngIf="
+            qualificationsForm.controls.professionalQualification.controls
+              .applicant_type.value.name == 'experienced'
+          "
+        >
+          <fieldset
+            [disabled]="
+              qualificationsForm.controls.professionalQualification.controls
+                .applicant_type.value.name != 'experienced'
+            "
+          >
+            <div class="userExpertTechnology">
+              <p>Select All The Technologies You Expertise In*</p>
+              <div
+                class="userExpertTechnologyInput"
+                *ngFor="let technology of technologies"
+              >
+                <input
+                  name="{{ technology.name }}"
+                  type="checkbox"
+                  id="{{ technology.name }}"
+                  (change)="
+                    onUserExpertTechnologyChange(
+                      technology.name,
+                      technology.id,
+                      $event
+                    )
+                  "
+                />
+                <label for="{{ technology.name }}">
+                  {{ technology.name }}
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <div
+          *ngIf="
+            qualificationsForm.controls.professionalQualification.controls
+              .applicant_type.value.name == 'experienced'
+          "
+        >
+          <fieldset
+            [disabled]="
+              qualificationsForm.controls.professionalQualification.controls
+                .applicant_type.value.name != 'experienced'
+            "
+            class="userExpertTechnologyOther"
+          >
+            <label for="userExpertTechnologyOther"
+              >If others, please mention</label
+            >
+            <input
+              type="text"
+              id="userExpertTechnologyOther"
+              name="userExpertTechnologyOther"
+              formArrayName="user_expert_technology"
+            />
+          </fieldset>
+        </div>
+        <div class="userFamiliarTechnology">
+          <p>Select All The Technologies You Are Familiar In</p>
+          <div
+            class="userFamiliarTechnologyInput"
+            *ngFor="let technology of technologies"
+          >
+            <input
+              name="{{ technology.name }}"
+              type="checkbox"
+              id="{{ technology.name }}"
+              (change)="
+                onUserFamiliarTechnologyChange(
+                  technology.name,
+                  technology.id,
+                  $event
+                )
+              "
+            />
+            <label for="{{ technology.name }}">
+              {{ technology.name }}
+            </label>
+          </div>
+        </div>
+        <div class="userFamiliarTechnologyOther">
+          <label for="userFamiliarTechnologyOther"
+            >If others, please mention</label
+          >
+          <input
+            type="text"
+            id="userFamiliarTechnologyOther"
+            name="userFamiliarTechnologyOther"
+            formArrayName="user_familiar_technology"
+          />
+        </div>
+        <div class="isThereNoticePeriod">
+          <label for="isThereNoticePeriod"
+            >Are you currently on notice period?*</label
+          >
+          <div class="isThereNoticePeriodOptions">
+            <input
+              type="radio"
+              id="yes"
+              name="is_there_notice_period"
+              value="true"
+              formControlName="is_there_notice_period"
+            />
+            <label for="yes">Yes</label>
+            <input
+              type="radio"
+              id="no"
+              name="is_there_notice_period"
+              value="false"
+              formControlName="is_there_notice_period"
+            />
+            <label for="no">No</label>
+          </div>
+        </div>
+        <fieldset
+          [disabled]="
+            qualificationsForm.controls.professionalQualification.controls
+              .is_there_notice_period.value != 'true'
+          "
+        >
+          <div
+            *ngIf="
+              qualificationsForm.controls.professionalQualification.controls
+                .is_there_notice_period.value == 'true'
+            "
+          >
+            <div class="noticePeriodDuration">
+              <div class="noticePeriodEndDate">
+                <label for="noticePeriodEndDate"
+                  >If Yes, when will your notice period end?*</label
+                >
+                <input
+                  type="date"
+                  id="noticePeriodEndDate"
+                  name="noticePeriodEndDate"
+                  formControlName="notice_period_end_date"
+                  required
+                />
+              </div>
+              <div class="noticePeriodLengthInMonths">
+                <label for="noticePeriodLengthInMonths"
+                  >How long is your notice period?* (Mention in months)</label
+                >
+                <select
+                  id="noticePeriodLengthInMonths"
+                  name="noticePeriodLengthInMonths"
+                  formControlName="notice_period_length_in_months"
+                  required
+                >
+                  <option *ngFor="let month of months" value="{{ month }}">
+                    {{ month }} month
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <div class="isAppearedPreviously">
+          <label for="isAppearedPreviously"
+            >Have You Appeared For Any Test By Zeus in the past 12
+            months?*</label
+          >
+          <div class="isAppearedPreviouslyOptions">
+            <input
+              type="radio"
+              id="yes"
+              name="is_appeared_previously"
+              value="true"
+              formControlName="is_appeared_previously"
+            />
+            <label for="yes">Yes</label>
+            <input
+              type="radio"
+              id="no"
+              name="is_appeared_previously"
+              value="false"
+              formControlName="is_appeared_previously"
+            />
+            <label for="no">No</label>
+          </div>
+        </div>
+        <div class="roleAppliedFor">
+          <label for="roleAppliedFor"
+            >If Yes, which role did you apply for?</label
+          >
+          <input
+            type="text"
+            id="roleAppliedFor"
+            name="roleAppliedFor"
+            formControlName="role_applied_for"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="buttons">
+      <button class="previousButton" routerLink="/register/personal-info">
+        PREVIOUS
+      </button>
+      <input type="submit" value="NEXT" class="nextButton" />
+    </div>
+  </form>
+</div>

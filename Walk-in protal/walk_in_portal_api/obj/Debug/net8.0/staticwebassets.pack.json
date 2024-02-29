@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Zeus internship\\zeustraining\\Walk-in protal\\walk_in_portal_api\\wwwroot\\Images\\IMG_20240219_221206.jpg",
+      "PackagePath": "staticwebassets\\Images\\IMG_20240219_221206.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.walk_in_portal_api.props",
+      "PackagePath": "build\\walk_in_portal_api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.walk_in_portal_api.props",
+      "PackagePath": "buildMultiTargeting\\walk_in_portal_api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.walk_in_portal_api.props",
+      "PackagePath": "buildTransitive\\walk_in_portal_api.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.walk_in_portal_api.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

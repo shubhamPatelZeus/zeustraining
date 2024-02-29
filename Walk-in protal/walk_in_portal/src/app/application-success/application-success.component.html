@@ -1,0 +1,40 @@
+<div class="successPage" *ngIf="jobApplicationDetails">
+  <div class="walkInapplicationSuccessfull">
+    <div class="title">
+      <img
+        src="https://cdn0.iconfinder.com/data/icons/social-messaging-ui-color-shapes-3/3/31-512.png"
+        alt="success"
+      />
+      <!-- <p>&#10004;</p> -->
+      <h2>
+        Congratulations ! You have successfully applied for the walk-in
+        opportunity
+      </h2>
+    </div>
+    <hr />
+    <div class="dateAndTime">
+      <p>Date & Time of Walk-In :</p>
+      <p>
+        {{ jobApplicationDetails.start_date | date : "dd-MMM-yyyy" }}
+      </p>
+      <p>
+        {{ jobApplicationDetails.time_slot_start | date : "shortTime" }} to
+        {{ jobApplicationDetails.time_slot_end | date : "shortTime" }}
+      </p>
+    </div>
+    <hr />
+    <div class="venue">
+      <p>Venue of Walk-In :</p>
+      <p>{{ jobApplicationDetails.venue_of_walk_in }}</p>
+    </div>
+    <hr />
+    <div class="thingsToRemember">
+      <p>THINGS TO REMEMBER :</p>
+      <p>{{ jobApplicationDetails.things_to_remember }}</p>
+    </div>
+    <hr />
+    <div class="downloadHallTicket">
+      <button>DOWNLOAD HALL TICKET</button>
+    </div>
+  </div>
+</div>

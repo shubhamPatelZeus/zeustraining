@@ -1,0 +1,162 @@
+<div class="personalInfoForm">
+  <div class="progressBar">
+    <div class="personalInfo">
+      <p class="checkpoint active">1</p>
+      <p>Personal Information</p>
+    </div>
+    <hr />
+    <div class="qualifications">
+      <p class="checkpoint">2</p>
+      <p>Qualifications</p>
+    </div>
+    <hr />
+    <div class="reviewAndProceed">
+      <p class="checkpoint">3</p>
+      <p>Review and Proceed</p>
+    </div>
+  </div>
+  <form ngNativeValidate [formGroup]="personalInfoForm" (ngSubmit)="onSubmit()">
+    <div class="formData">
+      <div class="leftSide">
+        <div class="first_name">
+          <label for="first_name">First Name*</label>
+          <input
+            type="text"
+            id="first_name"
+            name="first_name"
+            required
+            formControlName="first_name"
+          />
+        </div>
+        <div class="last_name">
+          <label for="last_name">Last Name*</label>
+          <input
+            type="text"
+            id="last_name"
+            name="last_name"
+            required
+            formControlName="last_name"
+          />
+        </div>
+        <div class="email_id">
+          <label for="email_id">Email*</label>
+          <input
+            type="email"
+            id="email_id"
+            name="email_id"
+            required
+            formControlName="email_id"
+          />
+        </div>
+        <div class="password">
+          <label for="password">Password*</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            formControlName="password"
+          />
+        </div>
+        <div class="phone_number">
+          <label for="phone_number">Phone Number*</label>
+          <div class="countryCodeAndPhoneNumberInput">
+            <span>+</span>
+            <input
+              type="text"
+              class="countryCodeInput"
+              name="country_code"
+              required
+              formControlName="country_code"
+            />
+            <input
+              type="text"
+              class="phoneNumberInput"
+              name="phone_number"
+              required
+              formControlName="phone_number"
+            />
+          </div>
+        </div>
+        <div class="resume">
+          <input
+            type="file"
+            id="resume"
+            name="resume"
+            (change)="handleFileInput($event)"
+          />
+          <span>UPLOAD RESUME</span>
+        </div>
+        <div class="portfolio_url">
+          <label for="portfolio_url">Enter Portfolio URL (if any)</label>
+          <input
+            type="text"
+            id="portfolio_url"
+            name="portfolio_url"
+            formControlName="portfolio_url"
+          />
+        </div>
+        <div class="preferredJobRoles">
+          <label for="preferred_job_roles">Preferred Job Roles*</label>
+          <div *ngIf="jobRoles.length > 0" class="jobRoles">
+            <div
+              class="jobRolesList"
+              *ngFor="let role of jobRoles"
+            >
+              <input
+                name="{{ role.name }}"
+                type="checkbox"
+                id="{{ role.name }}"
+                (change)="onPreferredJobChange(role.id, role.name, $event)"
+              />
+              <label for="{{ role.name }}">
+                {{ role.name }}
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="referrer">
+          <label for="referrer_name"
+            >If You Are Registering Via A Referral, Please Mention Full Name Of
+            The Employee Who Referred You</label
+          >
+          <input
+            type="text"
+            id="referrer_name"
+            name="referrer_name"
+            formControlName="referrer_name"
+          />
+        </div>
+        <div class="mailListSubcription">
+          <img
+            *ngIf="!isMailListSubcribed; else mailListSubcribed"
+            src="../../assets/images/check_box_outline_blank_black_24dp.svg"
+            alt="unchecked mail list subcription"
+            (click)="toggleMailListSubcription()"
+          />
+          <ng-template #mailListSubcribed>
+            <img
+              src="../../assets/images/check_box_black_24dp.svg"
+              alt="checked mail list subcription"
+              (click)="toggleMailListSubcription()"
+            />
+          </ng-template>
+          <p>Send me job related updates via mail</p>
+        </div>
+      </div>
+      <div class="rightSide">
+        <div class="userImage">
+          <input
+            type="file"
+            id="user_image"
+            name="user_image"
+            (change)="handleImageInput($event)"
+          />
+          <p>UPLOAD DISPLAY PICTURE</p>
+          <span>Max. image size: 5 MB</span>
+        </div>
+      </div>
+    </div>
+    <input type="submit" value="NEXT" />
+  </form>
+</div>

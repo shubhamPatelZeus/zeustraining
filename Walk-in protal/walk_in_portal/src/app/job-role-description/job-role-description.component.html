@@ -1,0 +1,38 @@
+<div class="jobRoleTitle" *ngIf="jobRoleDescription">
+  <div class="subTitle">
+    <h3>{{ jobRoleDescription.name }}</h3>
+    <div class="openButton" (click)="toggleJobRoleDescription()">
+      <img
+        src="../../assets/images/expand_less_black_24dp.svg"
+        alt="drop down"
+        [ngStyle]="{
+          transform: isJobRoleDescriptionOpen ? 'rotate(0)' : 'rotate(180deg)'
+        }"
+      />
+    </div>
+  </div>
+</div>
+<div *ngIf="jobRoleDescription">
+  <div class="isJobRoleDescription" *ngIf="isJobRoleDescriptionOpen">
+    <div class="grossCompensationPackage">
+      <p>General Instructions :</p>
+      <p>
+        {{ jobRoleDescription.grossCompensationPackage }}
+      </p>
+    </div>
+    <hr />
+    <div class="roleDescription">
+      <p>Instructions for the Exam :</p>
+      <p>
+        {{ jobRoleDescription.roleDescription }}
+      </p>
+    </div>
+    <hr />
+    <div class="requirements">
+      <p>Minimum System Requirements :</p>
+      <p>
+        {{ jobRoleDescription.requirements }}
+      </p>
+    </div>
+  </div>
+</div>

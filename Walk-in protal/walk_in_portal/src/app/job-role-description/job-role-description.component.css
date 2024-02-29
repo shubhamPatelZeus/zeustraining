@@ -1,0 +1,271 @@
+.subTitle {
+  width: 90vw;
+  height: 5vh;
+  display: flex;
+  padding: 1vh 1vw;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #dbefff;
+}
+
+.subTitle > .openButton {
+  height: 6.8vh;
+  width: 2.5vw;
+  border-left: 0.1vw solid #757575;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 1vw;
+}
+
+.isJobRoleDescription {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+.grossCompensationPackage,
+.roleDescription,
+.requirements {
+  display: flex;
+  flex-direction: column;
+  margin: 1vh 1vw;
+}
+
+.isJobRoleDescription hr {
+  height: 0.1vh;
+  width: 90vw;
+}
+
+.grossCompensationPackage p,
+.roleDescription p,
+.requirements p {
+  margin-top: 0.5vh;
+  color: #222222;
+  font-weight: 600;
+}
+
+.grossCompensationPackage p:nth-child(1),
+.roleDescription p:nth-child(1),
+.requirements p:nth-child(1) {
+  color: #666666;
+  font-weight: normal;
+}
+.requirements {
+  margin-bottom: 4vh;
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+  .walkInDetails {
+    font-size: 1.2vw;
+  }
+
+  .apply {
+    font-size: 0.9vw;
+  }
+
+  .title {
+    font-size: 1.5vw;
+  }
+
+  .title input[type="submit"] {
+    font-size: 1vw;
+  }
+
+  .dateAndLocation > p {
+    font-size: 1vw;
+  }
+
+  .jobRoles > p:nth-child(1) {
+    font-size: 1vw;
+  }
+
+  .isOpportunityofMcaStudents span {
+    font-size: 1vw;
+  }
+
+  .timeSlotAndPreferences p:nth-child(1) {
+    font-size: 1.3vw;
+  }
+
+  .selectTimeSlots label {
+    font-size: 1vw;
+  }
+
+  .selectPreferedRoles label {
+    font-size: 1vw;
+  }
+  .scrollToTop {
+    padding: 0.2vw;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 375px) {
+  .walkInDetails {
+    font-size: 1.4vw;
+  }
+
+  .apply {
+    font-size: 1.4vw;
+  }
+
+  .title {
+    font-size: 2vw;
+  }
+
+  .title input[type="submit"] {
+    font-size: 1.5vw;
+  }
+
+  .dateAndLocation > p {
+    font-size: 1.5vw;
+  }
+
+  .jobRoles > p:nth-child(1) {
+    font-size: 1.5vw;
+  }
+
+  .isOpportunityofMcaStudents span {
+    font-size: 1.5vw;
+  }
+
+  .timeSlotAndPreferences p:nth-child(1) {
+    font-size: 1.8vw;
+  }
+
+  .selectTimeSlots label {
+    font-size: 1.8vw;
+  }
+
+  .selectTimeSlots p {
+    font-size: 2vw;
+  }
+
+  .selectPreferedRoles label {
+    font-size: 1.8vw;
+  }
+
+  .uploadResume span {
+    font-size: 2vw;
+    left: 6.5vw;
+  }
+  .scrollToTop {
+    padding: 0.5vw;
+  }
+
+  .roles img {
+    width: 2vw;
+    height: 2vw;
+  }
+
+  .jobRole span {
+    font-size: 2vw;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .walkInDetails {
+    font-size: 2.5vw;
+  }
+
+  .basicDetails,
+  .isJobRoleDescription,
+  .jobRoleTitle {
+    width: 90vw;
+  }
+
+  .isJobRoleDescription {
+    padding: 1vh 3vw;
+  }
+
+  .subTitle {
+    padding: 1vh 3vw;
+  }
+
+  .title {
+    font-size: 5.8vw;
+    margin-left: 5vw;
+    margin-top: 0;
+    color: #222222;
+  }
+
+  .title input[type="submit"] {
+    position: fixed;
+    top: 96vh;
+    left: 0;
+    width: 100vw;
+    height: 4vh;
+    font-size: 2.5vw;
+  }
+
+  .subTitle {
+    padding: 1vh 3vw;
+  }
+
+  .dateAndLocation > p {
+    font-size: 3vw;
+  }
+
+  .jobRoles > p:nth-child(1) {
+    font-size: 3vw;
+  }
+
+  .openButton img {
+    width: 4vw;
+  }
+
+  .isOpportunityofMcaStudents span {
+    font-size: 2.5vw;
+  }
+
+  .timeSlotAndPreferences p:nth-child(1) {
+    font-size: 2.8vw;
+  }
+
+  .selectTimeSlots label {
+    font-size: 2.8vw;
+  }
+
+  .selectTimeSlots p {
+    font-size: 3vw;
+  }
+
+  .selectPreferedRoles label {
+    font-size: 2.8vw;
+  }
+
+  .uploadResume span {
+    font-size: 3vw;
+    left: 7.8vw;
+    margin-top: -2vh;
+  }
+  .scrollToTop {
+    padding: 1.5vw;
+  }
+
+  .roles img {
+    width: 3vw;
+    height: 3vw;
+  }
+
+  .roles {
+    flex-direction: column;
+  }
+
+  .roles p:nth-child(n + 2) {
+    margin-left: 0;
+  }
+
+  .jobRole span {
+    font-size: 3vw;
+  }
+
+  .scrollToTop {
+    top: 87vh;
+  }
+
+  .scrollToTop img {
+    width: 5vw;
+    height: 5vw;
+  }
+}

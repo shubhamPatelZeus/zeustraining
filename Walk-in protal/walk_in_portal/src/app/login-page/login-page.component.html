@@ -1,0 +1,60 @@
+<div class="login">
+  <form ngNativeValidate [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <h2>Log in</h2>
+    <div class="emailInput">
+      <input
+        id="email"
+        type="email"
+        formControlName="email"
+        required
+        placeholder="Email ID*"
+      />
+      <a href="#">FORGOT EMAIL ID?</a>
+    </div>
+    <div class="passwordInput">
+      <input
+        id="password"
+        type="{{ passwordInputType }}"
+        formControlName="password"
+        required
+        placeholder="Password*"
+      />
+      <img
+        src="../../assets/images/visibility_black_24dp.svg"
+        alt="show password"
+        (click)="toggleShowPassword()"
+      />
+      <a href="#">FORGOT PASSWORD?</a>
+    </div>
+    <div class="rememberMe">
+      <div class="rememberMeImg">
+        <img
+          *ngIf="!rememberMe; else checkedRememberMe"
+          src="../../assets/images/check_box_outline_blank_black_24dp.svg"
+          alt="unchecked remember me"
+          (click)="toggleRememberMe()"
+        />
+        <ng-template #checkedRememberMe>
+          <img
+            src="../../assets/images/check_box_black_24dp.svg"
+            alt="checked remember me"
+            (click)="toggleRememberMe()"
+          />
+        </ng-template>
+      </div>
+      <p>Remember Me</p>
+    </div>
+    <div *ngIf="errorMsg && errorMsg.length" class="errorMsg">{{ errorMsg }}</div>
+    <input type="submit" value="LOG IN" />
+    <div class="register">
+      <p>Not registered yet?</p>
+      <a routerLink="/register/personal-info">CREATE AN ACCOUNT</a>
+    </div>
+  </form>
+
+  <div class="footer">
+    <a href="#">About</a>
+    <span>|</span>
+    <a href="#">Contact Us</a>
+  </div>
+</div>

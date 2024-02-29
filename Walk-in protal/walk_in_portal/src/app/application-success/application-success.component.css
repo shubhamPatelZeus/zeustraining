@@ -1,0 +1,131 @@
+.successPage {
+  background-color: #eeeeee;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1vw;
+}
+
+.walkInapplicationSuccessfull {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px 2.5px #0000003d;
+  margin-top: 10vh;
+  padding: 1vh 1vw;
+  margin-bottom: 4.1vh;
+}
+
+p {
+  margin: 0;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title img {
+  height: 12vh;
+  width: 9vw;
+  margin-top: -7vh;
+}
+
+.dateAndTime,
+.venue,
+.thingsToRemember {
+  display: flex;
+  flex-direction: column;
+  margin: 1vh 1vw;
+}
+
+.dateAndTime p,
+.venue p,
+.thingsToRemember p {
+  margin-top: 0.5vh;
+  color: #222222;
+  font-weight: 600;
+}
+
+.dateAndTime p:nth-child(1),
+.venue p:nth-child(1),
+.thingsToRemember p:nth-child(1) {
+  color: #666666;
+  font-weight: normal;
+}
+
+hr {
+  width: 90vw;
+}
+
+button {
+  border: none;
+  border-radius: 0.4vh;
+  background-color: #3fd28b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1vh 1vw;
+  margin: 2vh 0;
+}
+
+.downloadHallTicket {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.venue,
+.thingsToRemember {
+  white-space: pre-line;
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+  .successPage {
+    font-size: 1.5vw;
+  }
+  button {
+    font-size: 1.5vw;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 375px) {
+  .successPage {
+    font-size: 1.8vw;
+    height: 92.2vh;
+  }
+  .walkInapplicationSuccessfull {
+    padding: 1vh 2vw;
+  }
+  button {
+    font-size: 1.5vw;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .successPage {
+    font-size: 4vw;
+    height: 92.2vh;
+  }
+  .walkInapplicationSuccessfull {
+    width: 90vw;
+    padding: 1vh 2vw;
+    margin-bottom: 10vh;
+  }
+
+  .title h2 {
+    text-align: center;
+    margin-top: 0;
+  }
+  button {
+    font-size: 3vw;
+  }
+  .title img {
+    height: 25vh;
+    width: 25vw;
+    margin-top: -14vh;
+  }
+}

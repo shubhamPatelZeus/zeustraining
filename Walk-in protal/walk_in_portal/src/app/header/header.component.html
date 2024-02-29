@@ -1,0 +1,20 @@
+<div class="header">
+  <img
+    class="logo"
+    src="../../assets/images/Zeus-LMS-logo.svg"
+    alt="Quantum logo"
+  />
+  <div *ngIf="userData && userData.first_name" class="userProfile">
+    <!-- <img
+      *ngIf="
+        userData.profile_url && userData.profile_url.length > 0;
+        else useName
+      "
+      src="{{ userData.profile_url }}"
+      alt="profile image"
+    /> -->
+    <div>
+      {{ userData.first_name[0] }}
+    </div>
+  </div>
+</div>

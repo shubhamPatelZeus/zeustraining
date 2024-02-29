@@ -1,0 +1,11 @@
+<div class="registerHead">
+  <a routerLink="/login">
+    <img src="../../assets/images/back.svg" alt="nack" class="backButton" />
+  </a>
+  <p>Create An Account</p>
+  <div class="buttons">
+    <button class="cancelButton" routerLink="/login">CANCEL</button>
+    <button class="createButton" [disabled]="formPageNumber < 3" (click)="submitRegistrationForm()">CREATE</button>
+  </div>
+</div>
+<router-outlet />
